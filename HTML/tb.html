@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .notification {
+        background-color: #f8f8f8;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        text-align: center;
+        }
+
+        .notification .message {
+        font-size: 16px;
+        color: #333;
+        }
+
+        .notification .close-btn {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="notification">
+        <p class="message">Thông báo: Sản phẩm đã được thêm vào giỏ hàng!</p>
+        <button class="close-btn" onclick="closeNotification()">Đóng</button>
+      </div>
+      <script>
+        function closeNotification() {
+        var notificationElement = document.querySelector('.notification');
+        notificationElement.style.display = 'none';
+        }
+      </script>
+</body>
+</html>

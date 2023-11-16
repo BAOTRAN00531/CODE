@@ -1,0 +1,26 @@
+h1 {
+    text-align: center;
+  }
+  
+  .message-box {
+    border-radius: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .message {
+    font-size: 18px;
+  }
+  
+  button {
+    border-radius: 20px;
+    padding: 10px 20px;
+    background-color: #6991c7;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button :hover{
+    background-color: #a3bded;
+  }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../CSS/danh_gia.css">  
+    <title>Đánh Giá</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h3> ĐÁNH GIÁ CỦA KHÁCH HÀNG</h3>
+        <form>
+            <div class="rating">
+                <input type="number" name="rating" hidden>
+                <i class='bx bx-star star'></i>
+                <i class='bx bx-star star'></i>
+                <i class='bx bx-star star'></i>
+                <i class='bx bx-star star'></i>
+                <i class='bx bx-star star'></i>
+            </div>
+            <textarea name="opinion" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
+            <div class="btn-group">
+                <button type="submit" class="btn submit">Submit</button>
+                <button onclick="cancel" class="btn cancel">Cancel</button>
+
+            </div>
+        </form>
+    </div>
+    <script src="../JS/danhgia.js"></script>
+
+    <script>
+        function cancel() {
+            document.getElementsByClassName('btn cancel').reset();
+        }
+    </script>
+</body>
+</html>
