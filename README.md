@@ -21,17 +21,13 @@
                     <div class="app-name">FutureBooks</div>
                 </a>
             </div>
-        
-        <!-- Giao diện giữa -->
         <div class="main-area">
-            <!-- hiện ra hai nút ẩn khi giao diện nhỏ (nút hiện giao diện bên trái và bên phải) -->
             <button class="btn-show-right-area">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"/></svg>
             </button>
             <button class="btn-show-left-area"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             </button>
-            <!-- Tiêu đề chính, chứa nút tìm kiếm -->
             <div class="main-area-header">
                 <!-- nút tìm kiếm -->
                 <div class="search-wrapper" id="searchLine">
@@ -42,10 +38,7 @@
                         <path d="M21 21l-4.35-4.35"/>
                     </svg>
                 </div>
-
-               
             </div>
-            <!-- nội dung -->
             <section class="content-section">
                 <h1 class="section-header">Tiêu Đề</h1>
                 <div class="games">
@@ -126,7 +119,6 @@
                     </div>
                   </div>
             </section>
-            <!-- nội dung -->
             <section class="content-section">
                 <div class="section-header-wrapper">
                     <h1 class="section-header">Tiêu Đề</h1>
@@ -209,7 +201,6 @@
                       </div>
                 </div>
             </section>
-            <!-- nội dung -->
             <section class="content-section">
                 <div class="section-header-wrapper">
                     <h1 class="section-header">Tiêu Đề</h1>
@@ -219,8 +210,6 @@
                 </div>
             </section>
         </div>
-
         <script src="button.js"></script>     
-        
     </body> 
 </html>
