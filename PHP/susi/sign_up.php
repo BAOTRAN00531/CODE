@@ -79,7 +79,7 @@
     </div>
     <br>
     <hr>
-    <h3>-- Đã có tài khoản - <a href="../HTML/signin_new.html">Đăng nhập</a></h3>
+    <h3>-- Đã có tài khoản - <a href="/HTML/signin_new.html">Đăng nhập</a></h3>
 </form>
 </div>
 <script>

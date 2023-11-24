@@ -11,11 +11,12 @@
         }elseif ($tam=='quanlydanhmucsanpham'&& $query=='sua'){
           include("../admin/edit.php");
         } elseif ($tam=='quanlysanpham' && $query=='them' ) {
-            include('../quanlysp/php/add.php');
+            include('../quanlysp/php/addnew.php');
+            include('../quanlysp/php/quanly.php');
         }elseif ($tam=='quanlysanpham' && $query=='sua'){
          //
         }else{
-            //
+          //
         }
         
         

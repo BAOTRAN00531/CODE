@@ -19,8 +19,8 @@
     <td><?php echo $i ?></td>
     <td><?php echo $row['LOAISP'] ?></td>
     <td>
-        <a href="/PHP/admin/handle.php?iddanhmuc=<?php echo $row['ID'] ?>"> Xóa </a> |
-         <a href="?action=quanlydanhmucsanpham&query=sua&iddanhmuc=<?php echo $row['ID'] ?>">Sửa</a>
+        <a href="/PHP/admin/handle.php?iddanhmuc=<?php echo $row['IDDM'] ?>"> Xóa </a> |
+         <a href="?action=quanlydanhmucsanpham&query=sua&iddanhmuc=<?php echo $row['IDDM'] ?>">Sửa</a>
     </td>
 </tr>
 <?php

@@ -1,6 +1,6 @@
 <?php 
     require'../db/conncet.php';
-    $show_edit_listname = "SELECT * FROM `danhmuc` WHERE ID='$_GET[iddanhmuc]' LIMIT 1";
+    $show_edit_listname = "SELECT * FROM `danhmuc` WHERE IDDM='$_GET[iddanhmuc]' LIMIT 1";
     $query_edit_listname = mysqli_query($conn,$show_edit_listname)
 ?> 
 <!DOCTYPE html>

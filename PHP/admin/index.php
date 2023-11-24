@@ -8,8 +8,7 @@
 <body>
     <h3>Welcome Admin</h3>
     <?php
-    include("../admin/menu.php");
-    include("../admin/main.php");
+    include("../admin/tongmenu.php");
     ?>
 </body>
 </html>
