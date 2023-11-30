@@ -1,0 +1,196 @@
+.btnmoreless {
+    margin: 8px 0px 0px 0px;
+    border-radius: 6px;
+border: none;
+background-color: transparent;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23888da9' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' class='feather feather-more-horizontal' viewBox='0 0 24 24'%3E%3Cdefs/%3E%3Ccircle cx='12' cy='12' r='1'/%3E%3Ccircle cx='19' cy='12' r='1'/%3E%3Ccircle cx='5' cy='12' r='1'/%3E%3C/svg%3E");
+background-repeat: no-repeat;
+background-position: center;
+background-size: contain;
+width: 26px;
+height: 18px;
+outline: none;
+cursor: pointer;
+transition: transform 0.3s ease; /* Thêm transition để tạo hiệu ứng */
+}
+
+.btnmoreless:hover {
+transform: translateY(-5px); /* Di chuyển lên 5px khi chuột di chuyển vào */
+}
+p {
+margin-top:0;
+margin-bottom: 0;
+}
+
+.card-2 {
+position: relative;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-direction: column;
+flex-direction: column;
+min-width: 0;
+word-wrap: break-word;
+background-color: #fff;
+background-clip: border-box;
+border: 1px solid rgba(0,0,0,.125);
+border-radius: .25rem;
+}
+.card{
+/* flex-direction: row;
+justify-content: center; */
+}
+
+.container-fliud{
+display:flex;
+/* justify-content: center; */
+}
+.anhdot{
+display: flex;
+flex-direction: column;
+margin-left: 2%;
+}
+
+.details-col-md-6{
+margin-left: 3%;
+margin-top: 2%;
+
+}
+.card-2 {
+background: #eee;
+padding: 1em;
+line-height: 1.5em;
+}
+
+/* số lượng sản phẩm */
+
+.quantity input {
+text-align: center;
+width: 60px;
+font-size: 16px;
+color: #43484D;
+font-weight: 300;
+}
+
+.minus-btn, .plus-btn {
+width: 30px;
+height: 30px;
+background-color: #E1E8EE;
+border-radius: 6px;
+border: none;
+cursor: pointer;
+}
+
+.input-so{
+width: 30px;
+height: 30px;
+background-color: #E1E8EE;
+border-radius: 6px;
+border: none;
+cursor: pointer;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+color: white;
+}
+.fade:not(.show) {
+opacity: 1;
+}
+
+/* Slideshow container */
+.slideshow-container {
+
+position: relative;
+/* margin: auto; */
+float: left; /* Thêm float để đưa slideshow về bên trái */
+}
+
+.container {
+
+overflow: hidden;
+position: relative;
+margin: auto;
+}
+
+/* Thêm một container cho nội dung bên cạnh */
+.content-container {
+float: left;
+margin-left: 20px; /* Điều chỉnh khoảng cách giữa slideshow và nội dung */
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute; 
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 10px;
+user-select: none;
+}
+.prev{
+left:0;
+margin-left: 5%;
+}
+.next {
+right: 0;
+margin-right: 5%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+a:not([href]):not([tabindex]) {
+color: rgba(255, 255, 255, 0);
+} 
+.prev:hover {
+background: linear-gradient(to right, #E1E8EE, rgba(233,236,241,1));
+}
+.next:hover {
+background: linear-gradient(to left, #E1E8EE, rgba(233,236,241,1));
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 100px;
+width: 100px;
+margin: 0 2px;
+background-color: #bbb;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: 1} 
+to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+}
+.mySlides.fade {
+width: 500px;
+height: 500px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.centered-image {
+max-width: 100%;
+max-height: 100%;
+display: block;
+margin: auto;
+}

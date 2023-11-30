@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.main-image {
+ width: 400px;
+ height: 400px;
+ overflow: hidden;
+}
+
+.main-image img {
+ width: 400px;
+ height: 400px;
+ object-fit: cover;
+}
+
+.thumbnail-images {
+ display: flex;
+ justify-content: center;
+ margin-top: 20px;
+}
+
+.thumbnail-images img {
+ width: 100px;
+ height: 100px;
+ object-fit: cover;
+ cursor: pointer;
+ margin-right: 10px;
+}
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="main-image">
+        <img src="7.png" alt="Image 1">
+        </div>
+        
+        <div class="thumbnail-images">
+        <img src="7.png" alt="Thumbnail 1" data-large-image="7.png">
+        <img src="6.png" alt="Thumbnail 2" data-large-image="6.png">
+        <img src="8.png" alt="Thumbnail 3" data-large-image="8.png">
+        </div>
+       </div>
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+ var thumbnailImages = document.querySelectorAll('.thumbnail-images img');
+
+ thumbnailImages.forEach(function(img) {
+    img.addEventListener('click', function() {
+      var mainImage = document.querySelector('.main-image img');
+      mainImage.src = this.getAttribute('data-large-image');
+    });
+ });
+});
+       </script>
+</body>
+</html>

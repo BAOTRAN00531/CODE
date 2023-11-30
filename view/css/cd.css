@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+
+svg {
+  width: 100%;
+  cursor: pointer;
+}
+
+#night-content {
+  opacity: 0.5;
+}
+
+.inner-shadow {
+  stroke-opacity: 0.1;
+  stroke-width: 5;
+  stroke: black;
+  fill: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
