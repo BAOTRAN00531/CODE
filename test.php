@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Books</title>
+    <title> Books</title>
     <link rel="shortcut icon" href="../IMG/7.png">
     <!-- css giao diện -->
     <link rel="stylesheet" href="../CSS/giaodien.css">
