@@ -31,7 +31,7 @@
     <!-- menu -->
     <link rel="stylesheet" href="menu_pu.css">
     <!-- danhgia -->
-    <link rel="stylesheet" href="danhgia.css">
+    <link rel="stylesheet" href="/view/css/danhgia.css">
     <link rel="stylesheet" href="slideshow.css">
     <link rel="stylesheet" href="trungbinhdanhgia.css">
     <!-- đầu trang-->
@@ -49,7 +49,7 @@
    
     <!-- <link rel="stylesheet" href="danhgia.css"> -->
     <!-- css nút ... -->
-    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="/view/css/slideshow.css">
     <link rel="stylesheet" href="trungbinhdanhgia.css">
     <link rel="stylesheet" href="view/css/cd.css">
 

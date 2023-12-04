@@ -1,8 +1,28 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Tahoma;
+    
+}
+
+body
+{
+    background-image: url('../a13a35bb99b11fe4a2ac81c1fbfdad98.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+}
+
 .wrapper
 {
-    margin-left: 20%;
-    margin-right: 20%;
+    background-color: #6991c7;
+    padding: 15px;
+    width: 50%;
     border-radius: 15px;
+    box-shadow: grey;
     text-align: center;
 }
 
@@ -15,7 +35,7 @@ textarea
     width: 100%;
     height: 300px;
     padding-left: 2px;
-    background-color:#e6e6e6;
+    background-color:rgba(255, 251, 251, 0.822);
     border-radius: 10px;
     border: none;
     outline: none;
@@ -32,7 +52,7 @@ textarea:placeholder-shown
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 50px;
-    color: #e6e6e6;
+    color: rgb(250, 250, 53);
     display: flex;
     justify-content: center;
     align-items: center;
