@@ -38,12 +38,16 @@
                 if(isset($_POST['capnhat'])&&($_POST['capnhat']))
                 {
                     $ten=$_POST['ten'];
-                    $thutu=$_POST['thutu'];
-                    danhmuc_update($thutu,$ten);
+                    $id = $_POST['thutu'];
+                    $iddm=$_POST['ma'];
+                    danhmuc_update($id,$iddm,$ten);
                 }
                 $listdm=danhmuc_select_all();
                 include "danhmuc/list.php";
                 break; 
+//------------------------------------------------------------------------------------
+
+
             case 'addsp':
                 if(isset($_POST['addsp'])&&($_POST['addsp'])){
                     $iddm=$_POST['iddm'];

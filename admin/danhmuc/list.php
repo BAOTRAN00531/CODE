@@ -9,6 +9,7 @@
                     <table style="color: violet;">
                         <tr>
                             <th></th>
+                            <th>THỨ TỰ</th>
                             <th>MÃ LOẠI</th>
                             <th>TÊN LOẠI</th>
                             <th></th>
@@ -21,6 +22,7 @@
                                 echo ' 
                                 <tr>
                                     <td><input type="checkbox" name="" id></td>
+                                    <td>'.$THUTU.'</td>
                                     <td>'.$IDDM.'</td>
                                     <td>'.$LOAISP.'</td>
                                     <td><a href="'.$suadm.'"><input type="button" value="Sửa"></a> <a href="'.$xoadm.'"><input type="button" value="Xóa"></a></td>
