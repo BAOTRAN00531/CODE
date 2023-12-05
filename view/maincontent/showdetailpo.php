@@ -76,8 +76,7 @@
                                 <button class="minus-btn" type="button" name="button">
                                     -
                                 </button>
-                                <input class="input-so" type="text" name="soluong" value="1"
-                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                <input class="input-so" type="text" name="soluong" value="1"oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                                 <button class="plus-btn" type="button" name="button">
                                     +
                                 </button>

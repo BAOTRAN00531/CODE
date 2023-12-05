@@ -7,25 +7,25 @@ function binhluan_insert($iduser, $onesp, $noidung, $ngay_bl){
     pdo_execute($sql, $iduser, $onesp, $noidung, $ngay_bl);
 }
 
-function binhluan_update($noidung,$id ){
-    $sql = "UPDATE binhluan SET noidung='.$noidung.' WHERE id=$id";
-    pdo_execute($sql, $noidung, $id);
+function binhluan_update($noidung,$ma_bl ){
+    $sql = "UPDATE binhluan SET noidung='.$noidung.' WHERE iduser=$ma_bl";
+    pdo_execute($sql, $noidung,$ma_bl);
 }
 
-function binhluan_delete($id){
-    $sql = "DELETE FROM binhluan WHERE id=?";
-    if(is_array($id)){
-        foreach ($id as $ma) {
+function binhluan_delete($ma_bl){
+    $sql = "DELETE FROM binhluan WHERE iduser=?";
+    if(is_array($ma_bl)){
+        foreach ($ma_bl as $ma) {
             pdo_execute($sql, $ma);
         }
     }
     else{
-        pdo_execute($sql, $id);
+        pdo_execute($sql, $ma_bl);
     }
 }
 
 function binhluan_select_all(){
-    $sql = "SELECT * FROM binhluan ORDER BY id DESC";
+    $sql = "SELECT * FROM binhluan ORDER BY iduser DESC";
     return pdo_query($sql);
 }
 

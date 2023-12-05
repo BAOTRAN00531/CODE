@@ -165,7 +165,7 @@
                                     $_SESSION['mycart'] = array();
                                     break;
                         case 'binhluan':
-                            if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
+                            if ( isset( $_POST["noidung"] ) && ($_POST['noidung'] != " ") )
                             {
                                 $noidung = $_POST['noidung'];
                                 $onesp = $_POST['onesp'];
