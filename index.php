@@ -89,7 +89,7 @@
                         case 'history':
                             $iduser = $_SESSION['ROLE']['USERID'];
                             $list = lichsu_select($iduser);
-                            include '../FutureBooks/test.php';
+                            include '../FutureBooks/test2.php';
                             break;
                         case 'fav':
                         
