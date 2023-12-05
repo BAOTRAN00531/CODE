@@ -270,7 +270,8 @@
         </div>
         </form>
     </div>
-    <script src="danhgia.js"></script>
+    <script src="/js(new)/danhgia.js"></script>
+    <script src="/js(new)/soluong.js"></script>
 
     <script>
     function cancel() {
