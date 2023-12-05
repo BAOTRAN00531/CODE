@@ -77,16 +77,26 @@ img {
     padding: 3em;
     line-height: 1.5em;
   }
-  .card2 {
+  .card-2 {
     background: #eee;
-    padding: 3em;
+    padding: 1em;
     line-height: 1.5em;
+    /* =========== */
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    }
+  .card-2 p{
+    margin-bottom: 0px;
   }
-  .card3 {
-    background: #eee;
-    padding: 3em;
-    line-height: 1.5em;
-  }
+
   
   @media screen and (min-width: 997px) {
     .wrapper {
