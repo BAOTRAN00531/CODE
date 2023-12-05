@@ -89,7 +89,7 @@
                         case 'history':
                             $iduser = $_SESSION['ROLE']['USERID'];
                             $list = lichsu_select($iduser);
-                            include '../code2/test.php';
+                            include '../FutureBooks/test.php';
                             break;
                         case 'fav':
                         
@@ -101,7 +101,7 @@
                                 $filename=$_FILES['hopdong']['name'];
                                 insert_dautu($ten,$congty,$filename,'');
                             }
-                            include "../code2/dtdautu.php";
+                            include "../FutureBooks/dtdautu.php";
                             break;
                         case 'sanpham':
                             if(isset($_POST['search']) && ($_POST['search'] !="")){
