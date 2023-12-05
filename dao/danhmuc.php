@@ -18,7 +18,7 @@ function danhmuc_insert($ma_loai, $tenloai){
  * @throws PDOException lỗi cập nhật
  */
 function danhmuc_update($id,$iddm, $ten_loai){
-    $sql = "UPDATE danhmuc SET  IDDM='".$iddm."' AND LOAISP='".$ten_loai."'  WHERE THUTU=".$id;
+    $sql = "UPDATE danhmuc SET  IDDM='".$iddm."',LOAISP='".$ten_loai."'  WHERE THUTU=".$id;
     pdo_execute($sql);
 }
 /**
