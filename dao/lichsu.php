@@ -1,6 +1,5 @@
+
 <?php 
-
-
 function lichsu_select($iduser)
 {
     $sql = ("SELECT * FROM `donhang` WHERE iduser=$iduser");

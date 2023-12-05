@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
     function view_cart(){
@@ -66,4 +67,5 @@
                 </tr>'; } 
     }
 ?>
+
      

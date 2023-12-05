@@ -1,5 +1,4 @@
 
-
 <div class="row">    
             <div class="row frmtitle">
                 <h1>DANH SÁCH LOẠI HÀNG</h1>
@@ -45,6 +44,7 @@
                 <a href="index.php?action=adddm"><input type="button" value="Nhập thêm"></a>
             </div>    
 </div>
+
 
 
 
