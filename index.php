@@ -15,25 +15,26 @@
     <link rel="stylesheet" href="/view/css/style2.css">
     <!-- css icon -->
     <link rel="stylesheet" href="/view/css/style4.css">
+    <!-- code nguyên (chi tiết sản phẩm) -->
     <link rel="stylesheet" href="/view/css/style5.css">
-    <!-- sang toi -->
+    <!-- css giao diện menu của Pu -->
     <link rel="stylesheet" href="/view/css/menu_pu.css">
     <!-- menu -->
     <link rel="stylesheet" href="/view/css/sildeshow.css">
     <link rel="stylesheet" href="/view/css/ratingbox.css">
-    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet" href="/view/css/style6.css">
     <!-- css sản phẩm -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="/view/css/style2.css">
     <!-- css icon -->
-    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="/view/css/style4.css">
     <!-- css nguyên -->
-    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="/view/css/style5.css">
     <!-- menu -->
-    <link rel="stylesheet" href="menu_pu.css">
+    <link rel="stylesheet" href="/view/css/menu_pu.css">
     <!-- danhgia -->
     <link rel="stylesheet" href="/view/css/danhgia.css">
-    <link rel="stylesheet" href="slideshow.css">
-    <link rel="stylesheet" href="trungbinhdanhgia.css">
+    <link rel="stylesheet" href="/view/css/slideshow.css">
+    <link rel="stylesheet" href="/view/css/trungbinhdanhgia.css">
     <!-- đầu trang-->
     <link rel="stylesheet" href="/view/css/backtotop.css">
     <link rel="stylesheet" href="/view/css/user.css">
@@ -41,7 +42,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/view/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
     <!-- css pu đánh giá -->
