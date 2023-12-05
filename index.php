@@ -34,9 +34,6 @@
     <link rel="stylesheet" href="danhgia.css">
     <link rel="stylesheet" href="slideshow.css">
     <link rel="stylesheet" href="trungbinhdanhgia.css">
-    <!-- đầu trang-->
-    <link rel="stylesheet" href="/view/css/backtotop.css">
-    <link rel="stylesheet" href="/view/css/user.css">
     <style>
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -46,12 +43,10 @@
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
     <!-- css pu đánh giá -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   
     <!-- <link rel="stylesheet" href="danhgia.css"> -->
     <!-- css nút ... -->
     <link rel="stylesheet" href="slideshow.css">
     <link rel="stylesheet" href="trungbinhdanhgia.css">
-    <link rel="stylesheet" href="view/css/cd.css">
 
     <!-- đánh giá 5 sao -->
 
@@ -63,10 +58,7 @@
     <script data-require="jquery@3.1.1" data-semver="3.1.1" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- nút với số lượng -->
     <script src="nguyen.js"></script>
-    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
     
 
 </head>
@@ -78,10 +70,10 @@
             include "dao/danhmuc.php";
             include "dao/sanpham.php";
             include "dao/account.php";
-            include "dao/binhluan.php";
             include "dao/dautu.php";
             include "global.php";
             include "dao/cart.php";
+            include "dao/lichsu.php";
             if (!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
             $spnew=sanpham_select_all_home();
             $dsdm=danhmuc_loadall();
@@ -92,6 +84,24 @@
             if (isset($_GET['action'] )&&($_GET['action'])) {
                 $act = $_GET['action'];
                     switch ($act) {
+                        
+                        case 'history':
+                            $iduser = $_SESSION['ROLE']['USERID'];
+                            $list = lichsu_select($iduser);
+                            include '../code2/test.php';
+                            break;
+                        case 'fav':
+                        
+                            break;
+                        case 'dkdautu':
+                            if(isset($_POST['hoten'])&&($_POST['hoten'] != "")){
+                                $ten=$_POST['hoten'];
+                                $congty=$_POST['congty'];
+                                $filename=$_FILES['hopdong']['name'];
+                                insert_dautu($ten,$congty,$filename,'');
+                            }
+                            include "../code2/dtdautu.php";
+                            break;
                         case 'sanpham':
                             if(isset($_POST['search']) && ($_POST['search'] !="")){
                                 $search = $_POST["search"];
@@ -107,18 +117,8 @@
                             $dssp = sanpham_selectall($search, $iddm);
                             include "view/maincontent/product.php";
                             break;
+                            
                         
-                        case 'dkdautu':
-                                if(isset($_POST['dkdautu'])&&($_POST['dkdautu'])){
-                                    $ten=$_POST['hoten'];
-                                    $congty=$_POST['congty'];
-                                    $filename=$_POST($_FILES['hopdong']['name']);
-                                    $target_dir = "../uploads/";
-                                    $target_file = $target_dir . basename($_FILES["hopdong"]["name"]);
-                                    insert_dautu($ten,$congty,'a','');
-                                }
-                                include "/code2/dtdautu.php";
-                                break;
                         case 'thoat':
                                 unset( $_SESSION['ROLE'] );
                                 $_SESSION['mycart']=[];
@@ -164,38 +164,27 @@
                         case 'emptycart':
                                     $_SESSION['mycart'] = array();
                                     break;
-                        case 'binhluan':
-                            if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
-                            {
-                                $noidung = $_POST['noidung'];
-                                $onesp = $_POST['onesp'];
-                                $iduser = $_POST['user']['id'];
-                                $ngay_bl = date( 'd/m/Y' );
-                                binhluan_insert( $ngay_bl, $iduser, $onesp, $ngay_bl );
-                                header("Location: ".$_SERVER['HTTP_SERVER']);
-                            } 
+                        case 'donhangtt':
+                            if (isset($_POST['dathang'] )&&($_POST['dathang'])) {
+                                 $name=$_POST['name'];
+                                 $email=$_POST['email'];
+                                 $phone=$_POST['tel'];
+                                 $pttt=1;
+                                 $tinhtrang=1;
+                                 $address=$_POST['address'];
+                                 $iduser=$_POST['iduser'];
+                                 $ngaydathang=date('d-m-Y H:i:s');
+                                 $tong=tongdon();
+                                 $iddh=insert_giohang($iduser, $name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
+                                //  foreach ($_SESSION['mycart'] as $cart) {
+                                //     insert_donhang($iddh , $name, $address, $phone, $email, $tong, $pttt , $ngaydathang , $tinhtrang);
+                                //  }
+                                 $_SESSION['cart']=[];
+                                }
+                                $donhang=loadone_donhang($iddh);
+                                $donhang=loadone_CART($iddh);
+                                include "view/other/dathangtc.php";
                             break;
-                            case 'donhangtt':
-                                if (isset($_POST['dathang'] )&&($_POST['dathang'])) {
-                                     $name=$_POST['name'];
-                                     $email=$_POST['email'];
-                                     $phone=$_POST['tel'];
-                                     $pttt=1;
-                                     $tinhtrang=1;
-                                     $address=$_POST['address'];
-                                     $ngaydathang=date('d-m-Y H:i:s');
-                                     $tong=tongdon();
-                                     $iddh=insert_giohang($name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
-                                    //  foreach ($_SESSION['mycart'] as $cart) {
-                                    //     insert_donhang($iddh , $name, $address, $phone, $email, $tong, $pttt , $ngaydathang , $tinhtrang);
-                                    //  }
-                                     $_SESSION['cart']=[];
-                                    }
-                                    $donhang=loadone_donhang($iddh);
-                                    $donhang=loadone_CART($iddh);
-                                    include "view/other/dathangtc.php";
-                                break;
-                       
                         default:
                             include "view/main.php";    
                                     break;
@@ -214,8 +203,6 @@
         <script src="slideshow.js"></script>
         <script src="menu_pu.js"></script>
         <script src="fb.js"></script>
-        <script src="/js(new)/chedosangtoi.js"></script>
-        
 
 </body>
 
