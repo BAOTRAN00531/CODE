@@ -263,6 +263,7 @@
                             <label for="address">Địa chỉ nhận hàng: </label> <br>
                             <input type="text" id="address" name="address" value="<?=$address?>"
                                 placeholder="Nhập địa chỉ.." /> <br />
+                                <input type="hidden" id="iduser" name="iduser" value="<?=$id?>">    
                             <div class="grid-container2">
                                 <div class="grid-container payment-method">
                                     <input class="item1" type="radio" id="cod" name="pttt" value="<?=1?>"
