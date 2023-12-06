@@ -90,7 +90,7 @@
                             <div class="action">
                                 <input type="submit" class="add-to-cart btn btn-default" id="btnThemVaoGioHang"
                                     name="addtocart" value="Thêm vào giỏ hàng">
-                                <a class="muangay btn btn-default" href="#"></span>mua ngay</a>
+                                <a class="muangay btn btn-default" href="/view/other/hoadon.php"></span>mua ngay</a>
                             </div>
                         </form>
                     </div>
