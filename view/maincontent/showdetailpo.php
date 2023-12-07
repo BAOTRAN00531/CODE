@@ -246,9 +246,8 @@
                 <div class="boxcontent binhluan">
                     <ul>
                     <?php 
-session_start();
-include "/github/FutureBooks/dao/binhluan.php"; 
-include_once "/github/FutureBooks/dao/pdo.php";
+
+
 if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
 {
     $noidung = $_POST['noidung'];
