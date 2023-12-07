@@ -35,7 +35,7 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
 <input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
                     <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
                         <div class="btn-group">
-                            <button type="submit" name="guibinhluan" class="btn submit">Submit</button>
+                            <input type="submit" name="guibinhluan" class="btn submit">
                             <button onclick="cancel" class="btn cancel">Cancel</button>
             
                         </div>
