@@ -53,7 +53,7 @@
     <link rel="stylesheet" href="/view/css/slideshow.css">
     <link rel="stylesheet" href="trungbinhdanhgia.css">
     <link rel="stylesheet" href="view/css/cd.css">
-
+    <link rel="stylesheet" href="../css/dathangtc.css">
     <!-- đánh giá 5 sao -->
 
 
