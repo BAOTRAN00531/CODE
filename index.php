@@ -77,7 +77,7 @@
         <?php
             include "dao/pdo.php"; 
             include "dao/danhmuc.php";
-            include "dao/sanpham.php";
+            include "dao/sanpham.php";  
             include "dao/account.php";
             include "dao/binhluan.php";
             include "dao/dautu.php";
@@ -110,6 +110,20 @@
                                 $iddm = $_POST['iddm'];
                             } else {
                                 $iddm = 0;
+                            }
+                            
+                            if(isset($_GET['thutu']) && ($_GET['thutu'] > 0)){
+                                $thutu = $_GET['thutu'];
+                                $iddm = getIDDMByOrder($thutu);
+                                if ($iddm) {
+                                    $dssp = sanpham_selectall("", $iddm);
+                                    $tendm = load_tendm($iddm);
+                                
+                                } else {
+                                    // Xử lý trường hợp không tìm thấy danh mục
+                                }
+                            } else {
+                                //include "view/maincontent/chinh.php";
                             }
                             $dssp = sanpham_selectall($search, $iddm);
                             include "view/maincontent/product.php";
@@ -178,7 +192,7 @@
                                 $noidung = $_POST['noidung'];
                                 $onesp = $_POST['onesp'];
                                 $iduser = $_POST['user']['id'];
-                                $ngay_bl = date( 'd/m/Y' );
+                                $ngay_bl = date('d-m-Y H:i:s');
                                 binhluan_insert( $ngay_bl, $iduser, $onesp, $ngay_bl );
                                 header("Location: ".$_SERVER['HTTP_SERVER']);
                             } 
