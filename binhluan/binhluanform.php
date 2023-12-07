@@ -11,6 +11,7 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
     binhluan_insert( $ngay_bl, $iduser, $idsp, $ngay_bl );
     header("Location: ".$_SERVER['HTTP_SERVER']);
 } 
+echo $iduser;
 ?>
 
 <div class="row mb"></div>
