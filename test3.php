@@ -1,13 +1,15 @@
 <?php 
 include_once("dao/binhluan.php");
+if ( isset($_GET["action"]) && ($_GET["action"])) {
 $noidung = $_POST['noidung'];
 $idsp = $_POST['idsp'];
 $iduser = $_POST['iduser'];
 $ngay_bl = date('d-m-Y H:i:s');
 binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
 echo "a";
+}
 ?>
-                <form action="index.php?action=binhluan" method="post">
+                <form action="action=a" method="post">
                     <input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
                     <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
                     <textarea name="noidung" cols="70" row="9"
