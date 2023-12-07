@@ -44,7 +44,7 @@ $ngaydang = $row['NGAYDATHANG'];
 
     <?php 
 echo "
-
+<div>
 <div>cam on bruh $hoten da dat hang</div>
 <div>thong tin don hang</div>
 <div>Ma don hang: $iddh</div>
@@ -52,7 +52,7 @@ echo "
 <div>Giao den dia chi: $diachi</div>
 <div>Tong hoa don: $tong</div>
 <div>Ngay dat hang: $ngaydang</div>
-
+</div>
 ";
     ?>
 
