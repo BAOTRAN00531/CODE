@@ -254,18 +254,13 @@
             echo "$noidung <br>";
             
         }
-        $idsp = $_GET['idsp'];
-        $iduser = $_SESSION['ROLE']['USERID'];
-        echo $idsp;
-        echo $iduser;
         ?>
                     </ul>
                 </div>
                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-                    <input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
+                <textarea name="noidung" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
+<input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
                     <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
-                    <textarea name="noidung" cols="70" row="9"
-                        placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
                     <div class="btn-group">
                     <input type="submit" name="guibinhluan" class="btn submit">
                         <button onclick="cancel" class="btn cancel">Cancel</button>
