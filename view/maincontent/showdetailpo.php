@@ -274,8 +274,8 @@ echo $iduser;
                 </div>
                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                 <textarea name="noidung" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
-<input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
-                    <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
+<input type="hidden" name="idsp" id="idsp" value="<?=$GET['idsp']?>">
+                    <input type="hidden" name="iduser" id="iduser" value="<?=$_SESSION['ROLE']['USERID']?>">
                     <div class="btn-group">
                     <input type="submit" name="guibinhluan" class="btn submit">
                         <button onclick="cancel" class="btn cancel">Cancel</button>
