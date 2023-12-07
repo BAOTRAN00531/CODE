@@ -130,15 +130,13 @@
                             break;
                         
                         case 'dkdautu':
-                                if(isset($_POST['dkdautu'])&&($_POST['dkdautu'])){
-                                    $ten=$_POST['hoten'];
-                                    $congty=$_POST['congty'];
-                                    $filename=$_POST($_FILES['hopdong']['name']);
-                                    $target_dir = "../uploads/";
-                                    $target_file = $target_dir . basename($_FILES["hopdong"]["name"]);
-                                    insert_dautu($ten,$congty,$filename,'');
-                                }
-                                include "dtdautu.php";
+                            if(isset($_POST['hoten'])&&($_POST['hoten'] != "")){
+                                $ten=$_POST['hoten'];
+                                $congty=$_POST['congty'];
+                                $filename=$_FILES['hopdong']['name'];
+                                insert_dautu($ten,$congty,$filename,'');
+                            }
+                            include "dtdautu.php";
                                 break;
                         case 'thoat':
                                 unset( $_SESSION['ROLE'] );
