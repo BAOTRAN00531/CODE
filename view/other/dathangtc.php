@@ -45,15 +45,15 @@ $ngaydang = $row['NGAYDATHANG'];
     <?php 
 echo "
 
-    <tr>
-    <td>$iddh</td>
-    <td>$hoten</td>
-    <td>$diachi</td>
-    <td>$phone<td>
-    <td>$email</td>
-    <td>$tong</td>
-    <td>$ngaydang</td>        
-    </tr>"    
+<div>cam on bruh $hoten da dat hang</div>
+<div>thong tin don hang</div>
+<div>Ma don hang: $iddh</div>
+<div>Mail su dung: $email</div>
+<div>Giao den dia chi: $diachi</div>
+<div>Tong hoa don: $tong</div>
+<div>Ngay dat hang: $ngaydang</div>
+
+";
     ?>
 
 
