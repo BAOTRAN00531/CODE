@@ -8,7 +8,7 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
     $idsp = $_POST['idsp'];
     $iduser = $_SESSION['ROLE']['USERID'];
     $ngay_bl = date( 'd/m/Y' );
-    binhluan_insert( "33", "16", $noidung , $ngay_bl );
+    binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
     header("Location: ".$_SERVER['HTTP_SERVER']);
 } 
 $iduser = $_SESSION['ROLE']['USERID'];
@@ -32,10 +32,9 @@ echo $iduser;
     </ul>
 </div>
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-<input type="hidden" name="onesp">
 <textarea name="noidung" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
-<input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
-                    <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
+<input type="hidden" name="idsp" id="idsp" value="<?="16"?>">
+                    <input type="hidden" name="iduser" id="iduser" value="<?="33"?>">
                         <div class="btn-group">
                             <input type="submit" name="guibinhluan" class="btn submit">
                             <button onclick="cancel" class="btn cancel">Cancel</button>
