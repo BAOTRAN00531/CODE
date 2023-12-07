@@ -8,7 +8,7 @@ $dbname = "futurebook";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
-$show_listname = "SELECT * FROM `donhang` ORDER BY `IDDH` ASC";
+$show_listname = "SELECT * FROM `donhang` ORDER BY `IDDH` DESC LIMIT 1";
 $query_listname = mysqli_query($conn,$show_listname);
 // Kiểm tra kết nối
 if ($conn->connect_error) {
