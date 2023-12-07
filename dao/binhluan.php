@@ -2,14 +2,14 @@
 <?php
 require_once 'pdo.php';
 
-function binhluan_insert($iduser, $onesp, $noidung, $ngay_bl){
-    $sql = "INSERT INTO binhluan(iduser, onesp, noidung, ngay_bl) VALUES (?,?,?,?)";
-    pdo_execute($sql, $iduser, $onesp, $noidung, $ngay_bl);
+function binhluan_insert($iduser, $idsp, $noidung, $ngay_bl){
+    $sql = "INSERT INTO binhluan(iduser, mahh, noidung, ngay_bl) VALUES (?,?,?,?)";
+    pdo_execute($sql, $iduser, $idsp, $noidung, $ngay_bl);
 }
 
-function binhluan_update($noidung,$ma_bl ){
-    $sql = "UPDATE binhluan SET noidung='.$noidung.' WHERE iduser=$ma_bl";
-    pdo_execute($sql, $noidung,$ma_bl);
+function binhluan_update($noidung,$iduser ){
+    $sql = "UPDATE binhluan SET noidung='.$noidung.' WHERE iduser=$iduser";
+    pdo_execute($sql, $noidung,$iduser);
 }
 
 function binhluan_delete($ma_bl){

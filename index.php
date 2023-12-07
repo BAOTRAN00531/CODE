@@ -191,7 +191,7 @@
                                 $idsp = $_POST['idsp'];
                                 $iduser = $_POST['iduser'];
                                 $ngay_bl = date('d-m-Y H:i:s');
-                                binhluan_insert( $ngay_bl, $iduser, $idsp, $ngay_bl );
+                                binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
                                 header("Location: ".$_SERVER['HTTP_SERVER']);
                             } 
                             break;
