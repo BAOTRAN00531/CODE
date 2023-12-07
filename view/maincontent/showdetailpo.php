@@ -255,7 +255,9 @@
             
         }
         $idsp = $_GET['idsp'];
+        $iduser = $_SESSION['ROLE']['USERID'];
         echo $idsp;
+        echo $iduser;
         ?>
                     </ul>
                 </div>
