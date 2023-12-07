@@ -257,8 +257,7 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
     binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
     header("Location: ".$_SERVER['HTTP_SERVER']);
 } 
-$iduser = $_SESSION['ROLE']['USERID'];
-echo $iduser;
+
 ?>
                         <?php 
         $dsbl = binhluan_select_all();

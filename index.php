@@ -184,18 +184,18 @@
                                     $_SESSION['mycart'] = array();
                                     include "view/other/test.php";
                                     break;
-                        case 'binhluan':
-                            if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
-                            {
-                                $noidung = $_POST['noidung'];
-                                $idsp = $_POST['idsp'];
-                                $iduser = $_POST['iduser'];
-                                $ngay_bl = date('d-m-Y H:i:s');
-                                binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
-                                header("Location: ".$_SERVER['HTTP_SERVER']);
-                            } 
-                            include 'view/maincontent/showdetailpo.php';
-                            break;
+                        // case 'binhluan':
+                        //     if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
+                        //     {
+                        //         $noidung = $_POST['noidung'];
+                        //         $idsp = $_POST['idsp'];
+                        //         $iduser = $_POST['iduser'];
+                        //         $ngay_bl = date('d-m-Y H:i:s');
+                        //         binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
+                        //         header("Location: ".$_SERVER['HTTP_SERVER']);
+                        //     } 
+
+                            // break;
                             case 'donhangtt':
                                 if (isset($_POST['dathang'] )&&($_POST['dathang'])) {
                                      $name=$_POST['name'];
