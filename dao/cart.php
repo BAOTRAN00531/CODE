@@ -1,3 +1,4 @@
+
 <?php
 
     function view_cart(){
@@ -29,13 +30,13 @@
                
         }return $tong;
     }
-    function insert_giohang($iduser, $name, $email, $phone,$address,$pttt, $ngaydathang, $tong){
+    function insert_giohang($iduser, $name, $address, $phone,$email, $tong,$pttt, $ngaydathang){
         $sql = "INSERT INTO donhang(iduser,HOTEN,DIACHI,PHONE,EMAIL,TONG,PTTT,NGAYDATHANG) VALUES ('$iduser','$name', '$address', '$phone','$email' ,'$tong','$pttt','$ngaydathang')";
        return pdo_execute_insertID($sql);
     }
-    function insert_donhang($userid, $idpro, $name, $hinh, $gia, $soluong, $thanhtien, $iddh) {
-        $sql = "INSERT INTO donhang(USERID, MASP, TENSP, hinhanh, GIA, SOLUONG, THANHTIEN, IDDH)
-                VALUES ('$userid', '$idpro', '$name', '$hinh', '$gia', '$soluong', '$thanhtien', '$iddh')";
+    function insert_donhang($iddh , $name, $address, $phone, $email, $tong, $pttt , $ngaydathang , $tinhtrang ) {
+        $sql = "INSERT INTO donhang( IDDH , HOTEN , DIACHI , PHONE , EMAIL , TONG , PTTT , NGAYDATHANG , TINHTRANG )
+                VALUES ( '$iddh' , '$name', '$address', '$phone', '$email', '$tong', '$pttt' , '$ngaydathang' , '$tinhtrang' )";
         return pdo_execute($sql);
     }
     function loadone_donhang($iddh) {
@@ -66,4 +67,5 @@
                 </tr>'; } 
     }
 ?>
+
      
