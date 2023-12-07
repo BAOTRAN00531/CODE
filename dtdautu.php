@@ -9,7 +9,7 @@
 <body>
     <h1>Đăng kí đầu tư</h1>
     <br>
-  <form action="index.php?action=dkdautu" method="post">
+  <form action="index.php?action=dkdautu" method="post" enctype="multipart/form-data">
     <label for="hoten">Họ tên:</label>
     <input type="text" id="hoten" name="hoten" required><br><br>
     <label for="congty">Công ty:</label>
