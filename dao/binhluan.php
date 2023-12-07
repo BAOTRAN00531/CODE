@@ -3,7 +3,7 @@
 require_once 'pdo.php';
 
 function binhluan_insert($iduser, $idsp, $noidung, $ngay_bl){
-    $sql = "INSERT INTO binhluan(iduser, mahh, noidung, ngay_bl) VALUES (?,?,?,?)";
+    $sql = "INSERT INTO binhluan(iduser, mahh, noidung, ngaydang) VALUES (?,?,?,?)";
     pdo_execute($sql, $iduser, $idsp, $noidung, $ngay_bl);
 }
 
