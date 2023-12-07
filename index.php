@@ -188,9 +188,6 @@
                                      $ngaydathang=date('d-m-Y H:i:s');
                                      $tong=tongdon();
                                      $iddh=insert_giohang($iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
-                                    //  foreach ($_SESSION['mycart'] as $cart) {
-                                    //     insert_donhang($iddh , $name, $address, $phone, $email, $tong, $pttt , $ngaydathang , $tinhtrang);
-                                    //  }
                                      $_SESSION['cart']=[];
                                     }
                                     $donhang=loadone_donhang($iddh);
