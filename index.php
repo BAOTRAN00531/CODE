@@ -185,7 +185,7 @@
                                     include "view/other/test.php";
                                     break;
                         case 'binhluan':
-                            if ( isset( $_POST["noidung"] ) && ($_POST['noidung'] != " ") )
+                            if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
                             {
                                 $noidung = $_POST['noidung'];
                                 $idsp = $_POST['idsp'];

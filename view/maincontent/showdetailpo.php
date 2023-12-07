@@ -261,7 +261,7 @@
         ?>
                     </ul>
                 </div>
-                <form action="index.php?action=binhluan" method="post">
+                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                     <input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
                     <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
                     <textarea name="noidung" cols="70" row="9"
