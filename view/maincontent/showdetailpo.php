@@ -269,6 +269,8 @@ echo $iduser;
             echo "$noidung <br>";
             
         }
+        echo $_GET['idsp']."<br>";
+        echo $_SESSION['ROLE']['USERID'];
         ?>
                     </ul>
                 </div>
