@@ -30,7 +30,7 @@
         }return $tong;
     }
     function insert_giohang($iduser, $name, $email, $phone,$address,$pttt, $ngaydathang, $tong){
-        $sql = "INSERT INTO cart(iduser,HOTEN,DIACHI,PHONE,EMAIL,TONG,PTTT,NGAYDATHANG) VALUES ('$iduser','$name', '$address', '$phone','$email' ,'$tong','$pttt','$ngaydathang')";
+        $sql = "INSERT INTO donhang(iduser,HOTEN,DIACHI,PHONE,EMAIL,TONG,PTTT,NGAYDATHANG) VALUES ('$iduser','$name', '$address', '$phone','$email' ,'$tong','$pttt','$ngaydathang')";
        return pdo_execute_insertID($sql);
     }
     function insert_donhang($userid, $idpro, $name, $hinh, $gia, $soluong, $thanhtien, $iddh) {
