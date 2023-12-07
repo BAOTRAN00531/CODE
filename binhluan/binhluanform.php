@@ -8,7 +8,7 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
     $idsp = $_POST['idsp'];
     $iduser = $_SESSION['ROLE']['USERID'];
     $ngay_bl = date( 'd/m/Y' );
-    binhluan_insert( "33", $idsp, $noidung , $ngay_bl );
+    binhluan_insert( "33", "16", $noidung , $ngay_bl );
     header("Location: ".$_SERVER['HTTP_SERVER']);
 } 
 $iduser = $_SESSION['ROLE']['USERID'];
