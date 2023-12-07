@@ -188,10 +188,10 @@
                             if ( isset( $_POST["noidung"] ) && ($_POST['noidung'] != " ") )
                             {
                                 $noidung = $_POST['noidung'];
-                                $onesp = $_POST['onesp'];
-                                $iduser = $_POST['user']['id'];
+                                $idsp = $_POST['idsp'];
+                                $iduser = $_POST['iduser'];
                                 $ngay_bl = date('d-m-Y H:i:s');
-                                binhluan_insert( $ngay_bl, $iduser, $onesp, $ngay_bl );
+                                binhluan_insert( $ngay_bl, $iduser, $idsp, $ngay_bl );
                                 header("Location: ".$_SERVER['HTTP_SERVER']);
                             } 
                             break;
