@@ -1,7 +1,7 @@
 <?php 
 session_start();
-include_once("dao/pdo.php");
-include("dao/binhluan.php");
+include_once "dao/pdo.php";
+include "dao/binhluan.php";
 if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
 {
     $noidung = $_POST['noidung'];
