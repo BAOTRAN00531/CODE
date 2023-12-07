@@ -267,7 +267,7 @@
                     <textarea name="noidung" cols="70" row="9"
                         placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
                     <div class="btn-group">
-                        <button type="submit" name="guibinhluan" class="btn submit">Submit</button>
+                    <input type="submit" name="guibinhluan" class="btn submit">
                         <button onclick="cancel" class="btn cancel">Cancel</button>
 
                     </div>
