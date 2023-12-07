@@ -181,12 +181,13 @@
                                      $name=$_POST['name'];
                                      $email=$_POST['email'];
                                      $phone=$_POST['tel'];
+                                     $iduser=$_POST['iduser'];
                                      $pttt=1;
                                      $tinhtrang=1;
                                      $address=$_POST['address'];
                                      $ngaydathang=date('d-m-Y H:i:s');
                                      $tong=tongdon();
-                                     $iddh=insert_giohang($name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
+                                     $iddh=insert_giohang($iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
                                     //  foreach ($_SESSION['mycart'] as $cart) {
                                     //     insert_donhang($iddh , $name, $address, $phone, $email, $tong, $pttt , $ngaydathang , $tinhtrang);
                                     //  }
