@@ -6,11 +6,12 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
 {
     $noidung = $_POST['noidung'];
     $idsp = $_POST['idsp'];
-    $iduser = $_POST['iduser'];
+    $iduser = $_SESSION['ROLE']['USERID'];
     $ngay_bl = date( 'd/m/Y' );
     binhluan_insert( $ngay_bl, $iduser, $idsp, $ngay_bl );
     header("Location: ".$_SERVER['HTTP_SERVER']);
 } 
+$iduser = $_SESSION['ROLE']['USERID'];
 echo $iduser;
 ?>
 
