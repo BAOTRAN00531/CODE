@@ -245,32 +245,32 @@
                 <div class="boxtitle">binh luan</div>
                 <div class="boxcontent binhluan">
                     <ul>
-                    <?php 
+                    <!-- <?php 
 
 
-if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
-{
-    $noidung = $_POST['noidung'];
-    $idsp = $_POST['idsp'];
-    $iduser = $_SESSION['ROLE']['USERID'];
-    $ngay_bl = date( 'd/m/Y' );
-    binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
-    header("Location: ".$_SERVER['HTTP_SERVER']);
-} 
+// if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
+// {
+//     $noidung = $_POST['noidung'];
+//     $idsp = $_POST['idsp'];
+//     $iduser = $_SESSION['ROLE']['USERID'];
+//     $ngay_bl = date( 'd/m/Y' );
+//     binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
+//     header("Location: ".$_SERVER['HTTP_SERVER']);
+// } 
 
-?>
-                        <?php 
-        $dsbl = binhluan_select_all();
-        foreach ( $dsbl as $bl )
-        {
-            extract( $bl );
+// ?>
+//                         <?php 
+//         $dsbl = binhluan_select_all();
+//         foreach ( $dsbl as $bl )
+//         {
+//             extract( $bl );
 
-            echo "$noidung <br>";
+//             echo "$noidung <br>";
             
-        }
-        echo $_GET['idsp']."<br>";
-        echo $_SESSION['ROLE']['USERID'];
-        ?>
+//         }
+//         echo $_GET['idsp']."<br>";
+//         echo $_SESSION['ROLE']['USERID'];
+//         ?>
                     </ul>
                 </div>
                 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
@@ -284,7 +284,8 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
                     </div>
                 </form>
         </div>
-        </form>
+        </form> -->
+        <iframe src="/test3.php" frameborder="0"></iframe>
     </div>
     <script src="/js(new)/danhgia.js"></script>
     <script src="/js(new)/soluong.js"></script>
