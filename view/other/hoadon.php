@@ -253,17 +253,17 @@
                         <form action="../../index.php?action=donhangtt" method="post">
                             <label for="name">Họ và Tên: </label><br>
                             <input type="text" id="name" name="name" value="<?=$name?>"
-                                placeholder="Nhập họ và tên.." /><br>
+                                placeholder="Nhập họ và tên.."><br>
                             <label for="email">Email: </label><br>
                             <input type="email" id="email" name="email" value="<?=$email?>"
-                                placeholder="Nhập email.." /><br>
+                                placeholder="Nhập email.." ><br>
                             <label for="phone">Số điện thoại: </label><br>
-                            <input type="tel" id="tel" name="tel" value="<?=$tel?>" placeholder="Nhập số điện thoại" />
+                            <input type="tel" id="tel" name="tel" value="<?=$tel?>" placeholder="Nhập số điện thoại" >
                             <br>
                             <label for="address">Địa chỉ nhận hàng: </label> <br>
                             <input type="text" id="address" name="address" value="<?=$address?>"
-                                placeholder="Nhập địa chỉ.." /> <br />
-                                <input type="hidden" id="iduser" name="iduser" value="<?=$id?>">  
+                                placeholder="Nhập địa chỉ.." > <br>
+                                <input type="hidden" id="iduser" name="iduser" value="<?=$id?>">    
                             <div class="grid-container2">
                                 <div class="grid-container payment-method">
                                     <input class="item1" type="radio" id="cod" name="pttt" value="<?=1?>"
