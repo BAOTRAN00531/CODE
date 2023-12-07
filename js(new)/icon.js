@@ -1,4 +1,3 @@
-// Function chung để thay đổi LordIcon
 function toggleLordIcon(lordIcon) {
     // Lấy trạng thái hiện tại từ sessionStorage
     var isAlternate = JSON.parse(sessionStorage.getItem("lordIconState")) || false;
@@ -26,9 +25,7 @@ for (var i = 0; i < lordIcons.length; i++) {
     });
 }
 
-// Set initial state based on sessionStorage
 var initialLordIconState = JSON.parse(sessionStorage.getItem("lordIconState")) || false;
 if (initialLordIconState) {
-    // Set the initial src based on the stored state
     lordIcons[0].setAttribute("src", "https://cdn.lordicon.com/ulnswmkk.json");
 }

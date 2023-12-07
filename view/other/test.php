@@ -143,7 +143,7 @@
                             }
                         } else {
                             // Handle the case where 'mycart' is not set or not an array
-                            echo 'No items in the cart.';
+                            
                         }
                     ?>
                 </table>
@@ -153,9 +153,11 @@
                     <?php
                     echo'
                         <tr>
-                        <td> <form action="index.php?action=emptycart" method="post">
-                        <input type="submit" name="removefromcart" value="Xóa Tất Cả">
-                    </form></td>  
+                        <td> 
+                            <form action="index.php?action=emptycart" method="post">
+                                <input type="submit" name="removefromcart" value="Xóa Tất Cả">
+                            </form> 
+                     </td>  
                         <td>Tổng Thanh Toán: '.$tong.' </td>
                         <div class="mua-hang">
                         <td><a href="/view/other/hoadon.php"><h4><b>MUA HÀNG</b></h4></a></td>
