@@ -136,9 +136,9 @@
                                     $filename=$_POST($_FILES['hopdong']['name']);
                                     $target_dir = "../uploads/";
                                     $target_file = $target_dir . basename($_FILES["hopdong"]["name"]);
-                                    insert_dautu($ten,$congty,'a','');
+                                    insert_dautu($ten,$congty,$filename,'');
                                 }
-                                include "/code2/dtdautu.php";
+                                include "dtdautu.php";
                                 break;
                         case 'thoat':
                                 unset( $_SESSION['ROLE'] );
