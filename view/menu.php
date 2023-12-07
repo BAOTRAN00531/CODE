@@ -13,6 +13,7 @@
                       <a href="../index.php?action=dangki"><i class="fa fa-fire"></i> Sale sốc</a>
                       <a href="../index.php?action=dangnhap"><i class="fa fa-fire"></i> Hot</a>
                       <a href="../index.php?action=lienhe"><i class="fa fa-phone"></i> Liên hệ</a>
+                      <a href="../index.php?action=history">lich su</a>
                       <div class="dropdown-btn"><i class="fa fa-book"></i> Danh Mục  
                           <i class="fa fa-caret-down"></i>
                       </div>

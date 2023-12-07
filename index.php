@@ -81,6 +81,7 @@
             include "dao/account.php";
             include "dao/binhluan.php";
             include "dao/dautu.php";
+            include "dao/lichsu.php";
             include "global.php";
             include "dao/cart.php";
             if (!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
@@ -93,6 +94,11 @@
             if (isset($_GET['action'] )&&($_GET['action'])) {
                 $act = $_GET['action'];
                     switch ($act) {
+                        case 'history':
+                            $iduser = $_SESSION['ROLE']['USERID'];
+                            $list = lichsu_select($iduser);
+                            include '../FutureBooks/test2.php';
+                            break;
                         case 'sanpham':
                             if(isset($_POST['search']) && ($_POST['search'] !="")){
                                 $search = $_POST["search"];
