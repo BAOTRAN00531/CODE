@@ -254,7 +254,7 @@
             echo "$noidung <br>";
             
         }
-        $idsp = $_SESSION['idsp'];
+        $idsp = $_GET['idsp'];
         echo $idsp;
         ?>
                     </ul>
