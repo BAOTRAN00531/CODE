@@ -257,7 +257,7 @@
         ?>
                     </ul>
                 </div>
-                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
+                <form action="<?php echo $_SERVER['PHP_SELF']; "index.php?action=binhluan" ?>" method="post">
                     <input type="hidden" name="onesp">
                     <textarea name="noidung" cols="70" row="9"
                         placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
