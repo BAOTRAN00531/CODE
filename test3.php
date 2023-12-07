@@ -17,7 +17,7 @@ break;
         }
 }
 ?>
-                <form action="a=a" method="post">
+                <form action="<?php binhluan_insert($iduser,$idsp,"a","9") ?>" method="post">
                     <input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
                     <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
                     <textarea name="noidung" id="noidung" cols="70" row="9"
