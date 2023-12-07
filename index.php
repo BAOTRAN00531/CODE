@@ -164,6 +164,7 @@
                                 break;
                         case 'emptycart':
                                     $_SESSION['mycart'] = array();
+                                    include "view/other/test.php";
                                     break;
                         case 'binhluan':
                             if ( isset( $_POST["noidung"] ) && ($_POST['noidung'] != " ") )
