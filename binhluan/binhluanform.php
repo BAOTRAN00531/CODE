@@ -1,7 +1,7 @@
 <?php 
 session_start();
-include "dao/pdo.php"; 
-include "dao/binhluan.php";
+include "/github/FutureBooks/dao/binhluan.php"; 
+include "/github/FutureBooks/dao/pdo.php";
 if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
 {
     $noidung = $_POST['noidung'];
