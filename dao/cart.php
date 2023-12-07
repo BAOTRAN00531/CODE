@@ -41,12 +41,12 @@
     }
     function loadone_donhang($iddh) {
         
-        $sql="select * from donhang where IDDH=".$iddh;
+        $sql="select * from donhang where IDDH=".$iddh."LIMIT 1";
         $dh=pdo_query_one($sql);
         return $dh;
     }
     function loadone_CART($iddh) {
-        $sql="select * from cart where IDDH=".$iddh;
+        $sql="select * from cart where IDDH=".$iddh."LIMIT 1";
         $dh=pdo_query_one($sql);
         return $dh;
     }
