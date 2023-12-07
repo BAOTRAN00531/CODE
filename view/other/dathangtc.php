@@ -44,7 +44,7 @@ $ngaydang = $row['NGAYDATHANG'];
 
     <?php 
 echo "
-<div align='center' class='confirm'>
+<div class='confirm'>
 <div>cam on bruh $hoten da dat hang</div>
 <div>thong tin don hang</div>
 <div>Ma don hang: $iddh</div>
