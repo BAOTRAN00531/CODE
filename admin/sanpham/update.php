@@ -6,7 +6,7 @@
     }
     $imgPATH="../uploads/".$hinhanh;
     if(is_file($imgPATH)){
-        $hinh="<img src='".$imgPATH."' max-height='80%'";
+        $hinh="<img src='".$imgPATH."' max-height='40%'";
     }else{
          $hinh="khum có ảnh";
     }
