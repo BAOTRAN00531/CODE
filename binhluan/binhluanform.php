@@ -1,14 +1,14 @@
 <?php 
 session_start();
-include("/CODE/dao/pdo.php");
-include("/CODE/dao/binhluan.php");
+include("dao/pdo.php");
+include("dao/binhluan.php");
 if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
 {
     $noidung = $_POST['noidung'];
-    $onesp = $_POST['onesp'];
-    $iduser = $_POST['user']['id'];
+    $idsp = $_POST['idsp'];
+    $iduser = $_POST['iduser'];
     $ngay_bl = date( 'd/m/Y' );
-    binhluan_insert( $ngay_bl, $iduser, $onesp, $ngay_bl );
+    binhluan_insert( $ngay_bl, $iduser, $idsp, $ngay_bl );
     header("Location: ".$_SERVER['HTTP_SERVER']);
 } 
 ?>
@@ -32,6 +32,8 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
 <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
 <input type="hidden" name="onesp">
 <textarea name="noidung" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
+<input type="hidden" name="idsp" id="idsp" value="<?=$idsp?>">
+                    <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
                         <div class="btn-group">
                             <button type="submit" name="guibinhluan" class="btn submit">Submit</button>
                             <button onclick="cancel" class="btn cancel">Cancel</button>
