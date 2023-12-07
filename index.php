@@ -208,12 +208,12 @@
             ?>
 
     </div>
-    <script src="button.js"></script>     
-        <script src="icon.js"></script>
-        <script src="soluong.js"></script>
-        <script src="slideshow.js"></script>
-        <script src="menu_pu.js"></script>
-        <script src="fb.js"></script>
+    <script src="/js(new)/button.js"></script>     
+        <script src="/js(new)/icon.js"></script>
+        <script src="/js(new)/soluong.js"></script>
+        <script src="/js(new)/slideshow.js"></script>
+        <script src="/js(new)/menu_pu.js"></script>
+        <script src="/js(new)/fb.js"></script>
         <script src="/js(new)/chedosangtoi.js"></script>
         
 
