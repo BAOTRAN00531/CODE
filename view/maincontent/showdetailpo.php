@@ -241,50 +241,34 @@
                     <i class='bx bx-star star'></i>
                     <i class='bx bx-star star'></i>
                 </div>
-                <div class="row mb"></div>
+            </form>
+        </div>
                 <div class="boxtitle">binh luan</div>
                 <div class="boxcontent binhluan">
                     <ul>
-                    <?php 
-
-
-if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
-{
-    $noidung = $_POST['noidung'];
-    $idsp = $_POST['idsp'];
-    $iduser = $_SESSION['ROLE']['USERID'];
-    $ngay_bl = date( 'd/m/Y' );
-    binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
-    header("Location: ".$_SERVER['HTTP_SERVER']);
-} 
-
-?>
                         <?php 
-        $dsbl = binhluan_select_all();
-        foreach ( $dsbl as $bl )
-        {
-            extract( $bl );
+                            $dsbl = binhluan_select_all();
+                            foreach ( $dsbl as $bl )
+                            {
+                                extract( $bl );
 
-            echo "$noidung <br>";
-            
-        }
-        echo $MASP."<br>";
-        echo $iduser;
-        ?>
+                                echo "$noidung <br>";
+                                
+                            }
+                            echo $MASP."<br>";
+                            echo $_SESSION['ROLE']['USERID'];
+                        ?>
                     </ul>
                 </div>
-                <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
-                <textarea name="noidung" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
-<input type="hidden" name="idsp" id="idsp" value="<?=$MASP?>">
-                    <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
+                <form action="../index.php?action=binhluan" method="post">
+                    <textarea name="noidung" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
+                    <input type="hidden" name="idsp" id="idsp" value="<?=$MASP?>">
+                    <input type="hidden" name="iduser" id="iduser" value="<?=$USERID?>">
                     <div class="btn-group">
-                    <input type="submit" name="guibinhluan" class="btn submit">
+                        <input type="submit" name="guibinhluan" class="btn submit">
                         <button onclick="cancel" class="btn cancel">Cancel</button>
-
                     </div>
                 </form>
-        </div>
-        </form>
     </div>
     <script src="/js(new)/danhgia.js"></script>
     <script src="/js(new)/soluong.js"></script>
