@@ -192,9 +192,10 @@
                                 $iduser = $_POST['iduser'];
                                 $ngay_bl = date('d-m-Y H:i:s');
                                 binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
-                               
+                            header ('Location: index.php?action=sanphamct&idsp='.$idsp.'');   
                             } 
-                            include 'view/maincontent/showdetailpo.php';
+                            
+                            // include 'view/maincontent/showdetailpo.php';
                             break;
                             case 'donhangtt':
                                 if (isset($_POST['dathang'] )&&($_POST['dathang'])) {

@@ -255,8 +255,7 @@
                                 echo "$noidung <br>";
                                 
                             }
-                            echo $MASP."<br>";
-                            echo $_SESSION['ROLE']['USERID'];
+
                         ?>
                     </ul>
                 </div>
