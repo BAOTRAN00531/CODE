@@ -269,7 +269,7 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
             
         }
         echo $MASP."<br>";
-        echo $_SESSION['ROLE']['USERID'];
+        echo $iduser;
         ?>
                     </ul>
                 </div>
