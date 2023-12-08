@@ -112,7 +112,7 @@
             <h3>Thông tin chi tiết về Sản phẩm</h3>
             <div class="row">
                 <div class="col">
-                    <p><?php   echo $MOTA;  ?> <span id="dots">...</span><span id="more">erisque enim ligula venenatis
+                    <p><?php   echo $MOTA;  ?> <span id="dots"></span><span id="more">erisque enim ligula venenatis
                             dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus
                             vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac.
                             In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Books</title>
     <link rel="shortcut icon" href="view/images/7.png">
+    
     <!-- css giao diện -->
     <link rel="stylesheet" href="/view/css/giaodien.css">
     <!-- css sản phẩm -->
@@ -64,14 +65,20 @@
                 <!-- nút tìm kiếm -->
                 <div class="container">
                     <div class="search-wrapper" id="searchLine">
-                        <input class="search-input" type="text" placeholder="tìm kiếm">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            class="feather feather-search" viewBox="0 0 24 24">
-                            <defs />
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="M21 21l-4.35-4.35" />
-                        </svg>
+                         <!-- nút tìm kiếm -->
+                <form action="../../index.php?action=sanpham" method="post">
+                    <div class="search-wrapper" id="searchLine">
+                        <input class="search-input" type="text" placeholder="Tìm kiếm" name="search">
+                        <button type="submit" style="border: none;background: none" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search"
+                                viewBox="0 0 24 24">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35" />
+                            </svg>
+                        </button>
+                    </div>
+         </form>
                     </div>
 
                 </div>
@@ -148,6 +155,7 @@
                     ?>
                 </table>
             </section>
+
             <section class="content-section">
                 <table class="chuyen-trang">
                     <?php
@@ -155,7 +163,7 @@
                         <tr>
                         <td> 
                             <form action="index.php?action=emptycart" method="post">
-                                <input type="submit" name="removefromcart" value="Xóa Tất Cả">
+                            <input type="submit" style="background-color: rgb(140, 200, 240);border:none;font-weight: bold;"  name="removefromcart" value="Xóa Tất Cả">
                             </form> 
                      </td>  
                         <td>Tổng Thanh Toán: '.$tong.' </td>

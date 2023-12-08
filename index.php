@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="/view/css/slideshow.css">
     <link rel="stylesheet" href="/view/css/trungbinhdanhgia.css">
     <!-- đầu trang-->
-    <link rel="stylesheet" href="/view/css/backtotop.css">
+    <!--<link rel="stylesheet" href="/view/css/backtotop.css"> bị trùng css với nút xem thêm của trang chi tiết sản phẩm -->
     <link rel="stylesheet" href="/view/css/user.css">
     <style>
     </style>

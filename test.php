@@ -6,19 +6,19 @@
     <title> Books</title>
     <link rel="shortcut icon" href="../IMG/7.png">
     <!-- css giao diện -->
-    <link rel="stylesheet" href="../CSS/giaodien.css">
+    <link rel="stylesheet" href="view/css/giaodien.css">
     <!-- css sản phẩm -->
-    <link rel="stylesheet" href="../CSS/sanpham.css">
+    <link rel="stylesheet" href="view/css/sanpham.css">
     <!-- css icon -->
-    <link rel="stylesheet" href="../CSS/icon.css">
+    <link rel="stylesheet" href="view/css/icon.css">
     <!-- menu -->
-    <link rel="stylesheet" href="../CSS/menu.css">
+    <link rel="stylesheet" href="view/css/menu.css">
     <!-- shopping cart-->
-    <link rel="stylesheet" href=".">
+    <link rel="stylesheet" href="view/css/shoppingcart.css">
     <!--about us-->
-    <link rel="stylesheet" href="../CSS/about_us.css">
+    <link rel="stylesheet" href="view/css/about_us.css">
     <!--back to top-->
-    <link rel="stylesheet" href="../CSS/backtotop.css">
+    <link rel="stylesheet" href="view/css/backtotop.css">
 
 
     <style>

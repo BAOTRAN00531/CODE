@@ -187,7 +187,7 @@
                 <!-- nút tìm kiếm -->
                 <div class="container">
                     <div class="search-wrapper" id="searchLine">
-                        <input class="search-input" type="text" placeholder="tìm kiếm">
+                        <input class="search-input" type="text" style="background-color: white;" placeholder="tìm kiếm">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             class="feather feather-search" viewBox="0 0 24 24">
