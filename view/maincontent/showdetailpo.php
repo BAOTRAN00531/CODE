@@ -268,7 +268,7 @@ if ( isset( $_POST["guibinhluan"] ) && $_POST["guibinhluan"] )
             echo "$noidung <br>";
             
         }
-        echo $_GET['idsp']."<br>";
+        echo $MASP."<br>";
         echo $_SESSION['ROLE']['USERID'];
         ?>
                     </ul>
