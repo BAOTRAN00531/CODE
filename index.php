@@ -146,7 +146,7 @@
                                 break;
                         case 'addtocart':
                             if (isset($_POST['addtocart'] )&&($_POST['addtocart'])) {
-                                    $id=$_POST['id'];
+                                    $id=$_POST['idsp'];
                                     $name=$_POST['ten'];
                                     $img=$_POST['hinh'];
                                     $gia = floatval($_POST['gia']);
@@ -206,9 +206,10 @@
                                      $tinhtrang=1;
                                      $address=$_POST['address'];
                                      $iduser=$_POST['iduser'];
+                                     $idsp=$_POST['idsp'];
                                      $ngaydathang=date('d-m-Y H:i:s');
                                      $tong=tongdon();
-                                     $iddh=insert_giohang($iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
+                                     $iddh=insert_giohang($idsp,$iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
                                      $_SESSION['cart']=[];
                                     }
                                     $donhang=loadone_donhang($iddh);

@@ -248,6 +248,7 @@
                             $email="";
                             $tel="";
                         }
+                        $idsp=$_GET['idsp'];
                   ?>
                         <h3>Địa chỉ thanh toán</h3>
                         <form action="../../index.php?action=donhangtt" method="post">
@@ -263,7 +264,8 @@
                             <label for="address">Địa chỉ nhận hàng: </label> <br>
                             <input type="text" id="address" name="address" value="<?=$address?>"
                                 placeholder="Nhập địa chỉ.." > <br>
-                                <input type="hidden" id="iduser" name="iduser" value="<?=$id?>">    
+                                <input type="hidden" id="iduser" name="iduser" value="<?=$id?>">
+                                <input type="hidden" id="idsp" name="idsp" value="<?=$idsp?>">
                             <div class="grid-container2">
                                 <div class="grid-container payment-method">
                                     <input class="item1" type="radio" id="cod" name="pttt" value="<?=1?>"

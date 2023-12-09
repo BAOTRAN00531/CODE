@@ -136,14 +136,13 @@
 
                                 // Increment the total amount
                                 $tong += $ttien;
-
                                 echo '<tr class="product-list">';
                                 echo '<td scope="col"><img src="' . $cart[2] . '"></td>';
                                 echo '<td scope="col">' . $cart[3] . '</td>';
                                 echo '<td scope="col">' . $cart[4] . '</td>';
                                 echo '<td scope="col">' . $cart[5] . '</td>';
                                 echo '<td><form action="index.php?action=removefromcart" method="post">
-                                <input type="hidden" name="id" value="'.$cart[0].'">
+                                <input type="hidden" name="idsp" value="'.$cart[0].'">
                                 <input type="submit" name="removefromcart" value="Xóa">
                             </form></td>';
                                 echo '</tr>';
@@ -159,6 +158,7 @@
             <section class="content-section">
                 <table class="chuyen-trang">
                     <?php
+                    
                     echo'
                         <tr>
                         <td> 
@@ -168,7 +168,7 @@
                      </td>  
                         <td>Tổng Thanh Toán: '.$tong.' </td>
                         <div class="mua-hang">
-                        <td><a href="/view/other/hoadon.php"><h4><b>MUA HÀNG</b></h4></a></td>
+                        <td><a href="/view/other/hoadon.php?idsp='.$cart[0].'"><h4><b>MUA HÀNG</b></h4></a></td>
                         </div>
                         </tr>'
                     ?>

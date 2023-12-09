@@ -6,6 +6,11 @@ function lichsu_select($iduser)
     $list = pdo_query($sql);
     return $list;
 }
+function lichsu_commented( $iduser , $idsp )
+{
+    $sql = ("SELECT * FROM `donhang` WHERE iduser=$iduser AND ");
+    
+}
 function lichsu_select_all()
 {
     $sql = ("SELECT * FROM `donhang`");

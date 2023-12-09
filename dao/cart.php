@@ -30,8 +30,8 @@
                
         }return $tong;
     }
-    function insert_giohang($iduser, $name, $address, $phone,$email, $tong,$pttt, $ngaydathang){
-        $sql = "INSERT INTO donhang(iduser,HOTEN,DIACHI,PHONE,EMAIL,TONG,PTTT,NGAYDATHANG) VALUES ('$iduser','$name', '$address', '$phone','$email' ,'$tong','$pttt','$ngaydathang')";
+    function insert_giohang($idsp, $iduser, $name, $address, $phone,$email, $tong,$pttt, $ngaydathang){
+        $sql = "INSERT INTO donhang(MASP,iduser,HOTEN,DIACHI,PHONE,EMAIL,TONG,PTTT,NGAYDATHANG) VALUES ('$idsp','$iduser','$name', '$address', '$phone','$email' ,'$tong','$pttt','$ngaydathang')";
        return pdo_execute_insertID($sql);
     }
     function insert_donhang($iddh , $name, $address, $phone, $email, $tong, $pttt , $ngaydathang , $tinhtrang ) {
