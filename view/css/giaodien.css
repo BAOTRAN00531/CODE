@@ -136,7 +136,9 @@
     padding: 0 12px;
     font-size: 12px;
   }
-
+  button[type="submit"] {
+    margin-right: 5px;
+  }
   /* nội dung trong main */
   .content-section {
     display: block;
