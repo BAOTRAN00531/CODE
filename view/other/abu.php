@@ -131,8 +131,7 @@
               
                 <div class="mySlides fade">
                   <div class="numbertext">3 / 3</div>
-                 <link rel="stylesheet" href="">
-                  
+                  <img src="/uploads/20.jpg" style="width:100%">
                 </div>
               
 
