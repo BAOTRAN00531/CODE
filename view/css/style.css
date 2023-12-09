@@ -118,7 +118,7 @@
   .search-wrapper {
     border-radius: 4px;
     background-color: #fff;
-    padding-right: 12px;
+    /* padding-right: 12px; */
     height: 40px;
     display: flex;
     justify-content: space-between;
@@ -136,7 +136,9 @@
     padding: 0 12px;
     font-size: 12px;
   }
-
+  button[type="submit"] {
+    margin-right: 15px;
+  }
   /* nội dung trong main */
   .content-section {
     display: block;

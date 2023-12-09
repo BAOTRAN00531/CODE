@@ -18,6 +18,7 @@
      </button>
      <!-- Tiêu đề chính, chứa nút tìm kiếm -->
             <div class="main-area-header">
+                
                 <!-- nút tìm kiếm -->
                 <form action="../../index.php?action=sanpham" method="post">
                     <div class="search-wrapper" id="searchLine">
@@ -30,9 +31,12 @@
                                 <path d="M21 21l-4.35-4.35" />
                             </svg>
                         </button>
+                        <?php
+                         include 'userpannel.php';
+                        ?>
                     </div>
-         </form>
-        
+                </form>
+           
             </div>
           
             <?php
