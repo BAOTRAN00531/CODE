@@ -83,7 +83,7 @@
                             </div>
                             <?php
                                     echo'
-                                    <input type="hidden" name="id" value="'.$MASP.'">  
+                                    <input type="hidden" name="idsp" value="'.$MASP.'">  
                                     <input type="hidden" name="ten" value="'.$TENSP.'">  
                                     <input type="hidden" name="hinh" value="'.$hinh.'">  
                                     <input type="hidden" name="gia" value="'.$GIASP.'"> ' ?>
