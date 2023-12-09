@@ -18,6 +18,7 @@
      </button>
      <!-- Tiêu đề chính, chứa nút tìm kiếm -->
             <div class="main-area-header">
+            
                 <!-- nút tìm kiếm -->
                 <form action="../../index.php?action=sanpham" method="post">
                     <div class="search-wrapper" id="searchLine">
@@ -31,8 +32,8 @@
                             </svg>
                         </button>
                     </div>
-         </form>
-        
+                </form>
+           
             </div>
           
             <?php

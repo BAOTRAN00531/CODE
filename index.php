@@ -35,9 +35,9 @@
     <link rel="stylesheet" href="/view/css/danhgia.css">
     <link rel="stylesheet" href="/view/css/slideshow.css">
     <link rel="stylesheet" href="/view/css/trungbinhdanhgia.css">
+    <link rel="stylesheet" href="/view/css/userpannel.css">
     <!-- đầu trang-->
     <!--<link rel="stylesheet" href="/view/css/backtotop.css"> bị trùng css với nút xem thêm của trang chi tiết sản phẩm -->
-    <link rel="stylesheet" href="/view/css/user.css">
     <style>
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
