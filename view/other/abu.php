@@ -117,7 +117,8 @@
                  We earnestly trust that books can be an extraordinary wellspring of motivation with the ability to impact and shape youthful personalities.
          <br><br>
                  Our books do not simply go for building up the scholarly capacities of youngsters; rather, they are made with the aim of contributing towards their all-encompassing improvement.
-                 
+          <br><br>
+                <a href="../../dtdautu.php">Contact</a>
                  </p>
                
                 </div>
