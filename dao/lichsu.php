@@ -2,7 +2,7 @@
 <?php 
 function lichsu_select($iduser)
 {
-    $sql = ("SELECT * FROM `donhang` WHERE iduser=$iduser");
+    $sql = ("SELECT * FROM `donhang` WHERE iduser=$iduser AND TINHTRANG=0");
     $list = pdo_query($sql);
     return $list;
 }
