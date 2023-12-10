@@ -70,8 +70,6 @@
  {
      // Lấy danh sách checkbox
      var checkboxes = document.getElementsByName('name[]');
-
-<<<<<<< HEAD
      // Lặp và thiết lập checked
      for (var i = 0; i < checkboxes.length; i++){
          checkboxes[i].checked = true;
@@ -91,6 +89,3 @@
  };
 
 </script>
-
-=======
->>>>>>> 0345ceb3278bc1b9bc06022cac5f08c9081da5ee

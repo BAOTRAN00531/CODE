@@ -4,7 +4,7 @@
       ?>
 <!-- nội dung -->
 <section class="content-section-1">
-    <h1 class="section-header">Chi tiết sản phẩm<?=$TENSP?></h1>
+ 
 
 </section>
 
@@ -25,19 +25,31 @@
 
                 <div class="mySlides fade">
 
-                    <img src="/view/images/10.png" width="500" height="500">
+                <?php echo '<img width="400" height="500" src="'.$hinh.'">'?>
 
                 </div>
 
                 <div class="mySlides fade">
 
-                    <img src="/view/images/11.png" width="500" height="500">
+                    <img src="/view/images/23.png" width="400" height="500">
 
                 </div>
 
                 <div class="mySlides fade">
 
-                    <img src="/view/images/8.png" width="500" height="500">
+                    <img src="/view/images/21.png" width="400" height="500">
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <img src="/view/images/22.png" width="400" height="500">
+
+                </div>
+
+                <div class="mySlides fade">
+
+                    <img src="/view/images/24.png" width="400" height="500">
 
                 </div>
 
@@ -54,14 +66,10 @@
 
             <!-- ======== -->
             <div class="details-col-md-6">
-                <h3 class="product-title">truyện cười dân gian</h3>
-                <div class="rating">
-
-                    <span class="review-no">999 reviews</span>
-                </div>
+                <h1 class="product-title"><?=$TENSP?></h1>
                 <p class="product-description">rat buon cuoi</p>
                 <div class="text-muted">Giá cũ: <s><span>10,990 vnđ</span></s></div>
-                <h4 class="price">Giá hiện tại: <span>10,000 vnđ</span></h4>
+                <h4 class="price">Giá hiện tại: <span><?=$GIASP . " ₫ "?></span></h4>
                 <p class="vote"><strong>100%</strong> hàng <strong>Chất lượng</strong>, đảm bảo
                     <strong>Uy
                         tín</strong>!
@@ -86,7 +94,7 @@
                                     <input type="hidden" name="idsp" value="'.$MASP.'">  
                                     <input type="hidden" name="ten" value="'.$TENSP.'">  
                                     <input type="hidden" name="hinh" value="'.$hinh.'">  
-                                    <input type="hidden" name="gia" value="'.$GIASP.'"> ' ?>
+                                    <input type="hidden" name="gia" value="'. $GIASP . " ₫ ".'"> ' ?>
                             <div class="action">
                                 <input type="submit" class="add-to-cart btn btn-default" id="btnThemVaoGioHang"
                                     name="addtocart" value="Thêm vào giỏ hàng">
@@ -278,6 +286,5 @@
     }
     </script>
 
-    <!-- ==== -->
-    </div>
+  
 </section>
