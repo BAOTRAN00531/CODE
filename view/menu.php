@@ -12,7 +12,7 @@
                         <a href="../index.php"><i class="fa fa-home"></i> Trang chủ</a>
                         <a href="../index.php?action=dangki"><i class="fa fa-fire"></i> Sale sốc</a>
                         <a href="../index.php?action=dangnhap"><i class="fa fa-fire"></i> Hot</a>
-                        <a href="/view/other/abu.php"><i class="fa fa-phone"></i> Liên hệ</a>
+                        <a href="../dtdautu.php"><i class="fa fa-phone"></i> Liên hệ</a>
                         <div class="dropdown-btn"><i class="fa fa-book"></i> Danh Mục  
                             <i class="fa fa-caret-down"></i>
                         </div>
@@ -147,42 +147,8 @@
                          }
                       ?>
                       <!-- cái này do chỉnh cho chiều ngang luôn luôn bằng nội dung dài nhất của div và a -->
-                  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        adjustSidenavWidth();
 
-        window.addEventListener('resize', function() {
-            adjustSidenavWidth();
-        });
-
-        function adjustSidenavWidth() {
-            var sidenav = document.querySelector('.sidenav');
-            var links = document.querySelectorAll('.sidenav a');
-            var dropdownContainer = document.querySelector('.dropdown-container');
-            var dropdownLinks = document.querySelectorAll('.dropdown-container a');
-
-            var maxWidth = 0;
-
-            // Tìm chiều ngang lớn nhất của các thẻ <a>
-            links.forEach(function(link) {
-                var linkWidth = link.offsetWidth;
-                maxWidth = Math.max(maxWidth, linkWidth);
-            });
-
-            // Tìm chiều ngang lớn nhất của các thẻ trong dropdown
-            dropdownLinks.forEach(function(link) {
-                var linkWidth = link.offsetWidth;
-                maxWidth = Math.max(maxWidth, linkWidth);
-            });
-
-            // Đặt chiều ngang của sidenav
-            sidenav.style.width = maxWidth + 'px';
-
-            // Đặt chiều ngang của dropdown container
-            dropdownContainer.style.width = maxWidth + 'px';
-        }
-    });
-</script>
+          
 
 </div>
                

@@ -66,21 +66,39 @@
 </style>
 </head>
 <body>
-
-<div class="dpdown" style="float:right;">
-  <button class="dbtn"><i class="fa fa-user"></i>
-    </button>
-  <div class="content">
-    <div class="open-tittle">
-  <span>Futurebook@fpt.edu.vn</span><br>
-  <span>Managed by Futurebook</span><br>
-    </div>
-  <img src="../IMG/7.png" width="100px"><br>
-  <span>Hi ! User</span><br>
-  <div class="google_account">
-  </div><br>
-  <button class="logout">Đăng xuất</button>
-  
+<?php 
+    if (isset($_SESSION['ROLE'])) {
+        extract($_SESSION['ROLE']); 
+        echo'<div class="dpdown" style="float:right;">
+        <button class="dbtn"><i class="fa fa-user"></i>
+          </button>
+        <div class="content">
+          <div class="open-tittle">
+        <span></span><br>
+        <span>Managed by Futurebook</span><br>
+          </div>
+        <img src="../IMG/7.png" width="100px"><br>
+        <span>chào ! '.$_SESSION['ROLE']['HOTEN'].'</span><br>
+        <div class="google_account">
+        </div><br>
+        <button class="logout">Đăng xuất</button>';
+  ?> 
+  <?php
+    }else{
+      echo'<div class="dpdown" style="float:right;">
+      <button class="dbtn"><i class="fa fa-user"></i>
+        </button>
+      <div class="content">
+        <div class="open-tittle">
+      <span>Futurebook@fpt.edu.vn</span><br>
+      <span>Managed by Futurebook</span><br>
+        </div>
+      <img src="../IMG/7.png" width="100px"><br>
+      <span>Hi ! User</span><br>
+      <div class="google_account">
+      </div><br>
+      <button class="logout">Đăng xuất</button>';}
+   ?>
 
   
   </div>

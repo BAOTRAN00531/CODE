@@ -1,7 +1,7 @@
 
 <?php
 
-    function view_cart(){
+    function viewcart(){
         global $imgPath;
         $tong=0;
         foreach ($_SESSION['mycart'] as $cart) 
@@ -33,7 +33,7 @@
     function insert_giohang($idsp, $iduser, $name, $address, $phone, $email, $tong, $pttt, $ngaydathang,$tensp,$image,$gia, $soluong) {
         $sql = "INSERT INTO donhang(MASP, iduser, HOTEN, DIACHI, PHONE, EMAIL, TONG, PTTT, NGAYDATHANG) VALUES ('$idsp','$iduser', '$name', '$address', '$phone', '$email', '$tong', '$pttt', '$ngaydathang')";
         $iddh = pdo_execute_insertID($sql);
-        view_cart();
+     
         // Sau khi thêm đơn hàng, thêm chi tiết giỏ hàng
         $sql_cart = "INSERT INTO cart(USERID, MASP,TENSP,hinhanh, GIA, SOLUONG, THANHTIEN, IDDH) VALUES ('$iduser', '$idsp','$tensp','$image','$gia', '$soluong', '$tong', '$iddh')";
         pdo_execute_insertID($sql_cart);

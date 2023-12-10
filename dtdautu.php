@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/view/css/dkdautu.css">
+
 </head>
 <body>
     <h1>Đăng kí đầu tư</h1>

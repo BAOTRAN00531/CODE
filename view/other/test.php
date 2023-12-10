@@ -18,7 +18,7 @@
                         <td><a href="#">
                                 <h6><b>1. KIỂM TRA GIỎ HÀNG CỦA BẠN</b></h6>
                             </a></td>
-                        <td><a href="/view/other/hoadon.php">
+                            <td><a href="../../index.php?action=donhangtt&idsp=<?=$idsp?>">
                                 <h6><b>2. TÍNH TIỀN VÀ THANH TOÁN</b></h6>
                             </a></td>
                         <td><a href="gio_hang_thanhcong.html">
@@ -95,7 +95,7 @@ if (isset($_SESSION['mycart']) && is_array($_SESSION['mycart']) && !empty($_SESS
             </form> 
           </td>  
           <td>Tổng Thanh Toán: ' . $tong ." ₫ ". ' </td>
-          <td class="mua-hang"><a href="/view/other/hoadon.php?idsp=' . $cart[0] . '"><h4><b>MUA HÀNG</b></h4></a></td>
+          <td class="mua-hang"><a href="../../index.php?action=thanhtoan&idsp=' . $cart[0] . '"><h4><b>MUA HÀNG</b></h4></a></td>
           </tr>';
     echo '</table>';
     echo '</section>';
@@ -110,7 +110,6 @@ if (isset($_SESSION['mycart']) && is_array($_SESSION['mycart']) && !empty($_SESS
 
 
             <!--Chuyển trang  //-->
-
 
 
         <script src="/js(new)/add.js"></script>
