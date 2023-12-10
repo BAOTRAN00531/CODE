@@ -1,6 +1,14 @@
 <?php
     ob_start();
 ?>
+
+<?php
+session_start(); // Bắt đầu session
+
+// Lấy giá trị trạng thái từ session hoặc mặc định là 'day'
+$themeMode = isset($_SESSION['themeMode']) ? $_SESSION['themeMode'] : 'day';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -230,13 +238,18 @@
 
     </div>
     <script src="/js(new)/button.js"></script>     
-        <script src="/js(new)/icon.js"></script>
-        <script src="/js(new)/soluong.js"></script>
+        <script src="/js(new)/icon.js"></script>   
         <script src="/js(new)/slideshow.js"></script>
         <script src="/js(new)/menu_pu.js"></script>
         <script src="/js(new)/fb.js"></script>
         <script src="/js(new)/chedosangtoi.js"></script>
-        
+        <script>
+        // Chuyển giá trị PHP sang JavaScript
+        let isDay = <?php echo json_encode($themeMode === 'day'); ?>;
+
+        // Gọi hàm toggle() từ theme.js
+        toggle();
+    </script>
 
 </body>
 

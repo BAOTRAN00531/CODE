@@ -46,7 +46,7 @@
                                     <td><input type="checkbox" name="" id></td>
                                     <td>'.$MASP.'</td>
                                     <td>'.$TENSP.'</td>
-                                    <td>'.$GIASP.'</td>
+                                    <td>'. number_format($sanpham['GIASP']) . " ₫ ".'</td>
                                     <td>'.$TONKHO.'</td>
                                     <td>'.$hinh.'</td>
                                     <td>'.$MOTA.'</td>
@@ -63,5 +63,4 @@
                 <input type="button" value="Xóa" >
                 <a href="index.php?action=addsp"><input type="button" value="Nhập thêm"></a>
          
-
 

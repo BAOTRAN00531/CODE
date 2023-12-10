@@ -146,7 +146,44 @@
                                 echo'';         
                          }
                       ?>
-                  
+                      <!-- cái này do chỉnh cho chiều ngang luôn luôn bằng nội dung dài nhất của div và a -->
+                  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        adjustSidenavWidth();
+
+        window.addEventListener('resize', function() {
+            adjustSidenavWidth();
+        });
+
+        function adjustSidenavWidth() {
+            var sidenav = document.querySelector('.sidenav');
+            var links = document.querySelectorAll('.sidenav a');
+            var dropdownContainer = document.querySelector('.dropdown-container');
+            var dropdownLinks = document.querySelectorAll('.dropdown-container a');
+
+            var maxWidth = 0;
+
+            // Tìm chiều ngang lớn nhất của các thẻ <a>
+            links.forEach(function(link) {
+                var linkWidth = link.offsetWidth;
+                maxWidth = Math.max(maxWidth, linkWidth);
+            });
+
+            // Tìm chiều ngang lớn nhất của các thẻ trong dropdown
+            dropdownLinks.forEach(function(link) {
+                var linkWidth = link.offsetWidth;
+                maxWidth = Math.max(maxWidth, linkWidth);
+            });
+
+            // Đặt chiều ngang của sidenav
+            sidenav.style.width = maxWidth + 'px';
+
+            // Đặt chiều ngang của dropdown container
+            dropdownContainer.style.width = maxWidth + 'px';
+        }
+    });
+</script>
+
 </div>
                
         

@@ -25,7 +25,7 @@
                                                 </div>
                                             </a>
                                             <div class="game-categories">
-                                                <a href="index.php?action=addtocart&id='.$MASP.'&ten='.$TENSP.'&hinh='.$hinh.'&gia='.$GIASP.'">+</a>
+                                                <a href="index.php?action=addtocart&id='.$MASP.'&ten='.$TENSP.'&hinh='.$hinh.'&gia='. $GIASP . " ₫ ".'">+</a>
                                             </div>
                                         </div>';
                                 }
