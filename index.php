@@ -2,12 +2,7 @@
     ob_start();
 ?>
 
-<?php
-session_start(); // Bắt đầu session
 
-// Lấy giá trị trạng thái từ session hoặc mặc định là 'day'
-$themeMode = isset($_SESSION['themeMode']) ? $_SESSION['themeMode'] : 'day';
-?>
 
 <!DOCTYPE html>
 <html lang="en">

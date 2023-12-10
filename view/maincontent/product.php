@@ -21,7 +21,7 @@
                                                 </div>
                                                 <div class="game-info">
                                                     <p class="game-title">'.$TENSP.'</p>
-                                                    <p class="game-viewership">'.$GIASP.'</p>
+                                                    <p class="game-viewership">'. $GIASP . " ₫ ".'</p>
                                                 </div>
                                             </a>
                                             <div class="game-categories">
@@ -30,6 +30,7 @@
                                         </div>';
                                 }
                                 ?>
-                            </div> </div>
+                            </div> 
+                        </div>
                   
 </section>
