@@ -5,34 +5,36 @@
         error_reporting(E_ALL);
         ini_set('display_errors', '1');
         $imgPath = "/";
-
+    
         echo '<thead>
-        <tr class="heading text-center">
-            <th scope="col">CHI TIẾT SẢN PHẨM</th>
-        </tr>
-    </thead>
-    <tbody>';
-   
-    $tong = 0;
-
-    foreach ($_SESSION['mycart'] as $cart) {
+            <tr class="heading text-center">
+                <th scope="col">CHI TIẾT SẢN PHẨM</th>
+                <th scope="col">SỐ LƯỢNG</th>
+                <th scope="col">THÀNH TIỀN</th>
+            </tr>
+        </thead>
+        <tbody>';
+       
+        $tong = 0;
+    
+        foreach ($_SESSION['mycart'] as $cart) {
             $image = $imgPath . $cart[2];
             $ttien = $cart[3] * $cart[4];
             $tong += $ttien;
             $found = false;
-            echo ' <tr class="product-list">';
-            echo ' <td scope="col"><img src="' . $image . '"></td>';
-            echo '<td scope="col">' . $cart[3] . '</td>';
-            echo '  <td scope="col">' . $cart[4] . '</td>';
-            echo ' <td scope="col">' . $cart[5] . '</td>';
-            echo '  </tr>';
-    }
-    
-        echo'</tbody>  <tfoot>
-                    <tr class="heading text-left">
-                        <td scope="col">Tổng Thanh Toán:' . $tong . '</td>
-                    </tr> 
-                </tfoot>';
+            echo '<tr class="product-list">';
+            echo '<td scope="col"><img src="' . $image . '"></td>';
+            echo '<td scope="col">' . $cart[4] . '</td>';
+            echo '<td scope="col">' . $ttien . '</td>';
+            echo '</tr>';
+        }
+        
+        echo'</tbody>  
+        <tfoot>
+            <tr class="heading text-left">
+                <td scope="col">Tổng Thanh Toán: ' . $tong . '</td>
+            </tr> 
+        </tfoot>';
     }
 
 ?>
@@ -200,7 +202,9 @@
                 </div>
             </div>
             <!-- Sản phẩm -->
-            <h2><i class="fa fa-shopping-cart"></i> TÍNH TIỀN VÀ THANH TOÁN</h2>
+            <td><a href="../../index.php?action=donhangtt&idsp=<?=$idsp?>">
+                <h6><b>2. TÍNH TIỀN VÀ THANH TOÁN</b></h6>
+            </a></td>
             <!-- Chuyển trang -->
             <section class="content-section">
                 <table class="chuyen-trang">

@@ -212,11 +212,19 @@
                                      $idsp=$_POST['idsp'];
                                      $ngaydathang=date('d-m-Y H:i:s');
                                      $tong=tongdon();
-                                     $iddh=insert_giohang($idsp,$iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
-                                     $_SESSION['cart']=[];
+                                        foreach ($_SESSION['mycart'] as &$cart) {
+                                            $tensp=$cart[1] ;
+                                            $image=$cart[2];
+                                            $gia=$cart[3];
+                                        $soluong = $cart[4] ; // Cập nhật số lượng
+                                            break;
+                                        }
                                     }
+                                     $iddh=insert_giohang($idsp,$iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang,$tensp,$image,$gia, $soluong);
+ 
                                     $donhang=loadone_donhang($iddh);
                                     $donhang=loadone_CART($iddh);
+                                    $_SESSION['mycart'] = array();
                                     include "view/other/dathangtc.php";
                                 break;
                        
