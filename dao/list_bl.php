@@ -16,11 +16,11 @@
 
  ?>
  <tr>
-    <td><?php echo $row['id'] ?></td>
+    <td><?php echo $row['iduser'] ?></td>
     <td><?php echo $row['noidung'] ?></td>
     <td>
-        <a href="/PHP/admin/handle.php?id=<?php echo $row['id'] ?>"> Xóa </a> |
-        <a href="?action=binhluan&query=sua&id=<?php echo $row['id'] ?>">Sửa</a>
+        <a href="/PHP/admin/handle.php?id=<?php echo $row['iduser'] ?>"> Xóa </a> |
+        <a href="?action=binhluan&query=sua&id=<?php echo $row['iduser'] ?>">Sửa</a>
  
     </td>
 </tr>

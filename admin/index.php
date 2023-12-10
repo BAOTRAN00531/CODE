@@ -81,6 +81,7 @@
                 if (isset($_GET['id'])&&($_GET['id']>0)) {
                     sanpham_delete($_GET['id']);
                   }
+                 
                   $listsp=sanpham_select_all("",0);
                   include "sanpham/list.php";
                 break;
