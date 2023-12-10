@@ -4,10 +4,11 @@
     <title>SẢN PHẨM</title>
 </head>
 <body>
+    <h1>THÊM LOẠI HÀNG</h1>
     <!-- Form thêm sản phẩm -->
     <form action="index.php?action=addsp" id="product-form" method="post" enctype="multipart/form-data" >
         <div class="">
-            Danh MỤC
+            DANH MỤC
             <select name="iddm" id="">
                 <?php
                     foreach ($listdm as $danhmuc) {
