@@ -173,7 +173,7 @@
                                 break;
                         case 'removefromcart':
                                 if (isset($_POST['removefromcart'] )&&($_POST['removefromcart'])) {
-                                        $id=$_POST['id'];
+                                        $id=$_POST['idsp'];
                                         foreach ($_SESSION['mycart'] as $key => $item) {
                                             if ($item[0] == $id) {
                                                 unset($_SESSION['mycart'][$key]);

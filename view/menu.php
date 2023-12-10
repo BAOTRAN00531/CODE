@@ -12,7 +12,7 @@
                         <a href="../index.php"><i class="fa fa-home"></i> Trang chủ</a>
                         <a href="../index.php?action=dangki"><i class="fa fa-fire"></i> Sale sốc</a>
                         <a href="../index.php?action=dangnhap"><i class="fa fa-fire"></i> Hot</a>
-                        <a href="../index.php?action=dkdautu"><i class="fa fa-phone"></i> Liên hệ</a>
+                        <a href="/view/other/abu.php"><i class="fa fa-phone"></i> Liên hệ</a>
                         <div class="dropdown-btn"><i class="fa fa-book"></i> Danh Mục  
                             <i class="fa fa-caret-down"></i>
                         </div>
