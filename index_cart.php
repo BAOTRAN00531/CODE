@@ -25,7 +25,7 @@
 </head>
     <body>
       <!-- Phần này là giao diện của ứng dụng Future Books -->
-        <div class="app-container">
+      
              <?php
                 include "PHP/menu.php";
                 include "dao/pdo.php"; 
@@ -64,7 +64,7 @@
               ?>
         
        
-        </div>
+    
         <script src="/js(new)/add.js"></script>
         <script src="/js(new)/button.js"></script>     
         <script src="/js(new)/icon.js"></script>

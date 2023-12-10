@@ -17,8 +17,8 @@ function danhmuc_insert($ma_loai, $tenloai){
  * @param String $ten_loai là tên loại mới
  * @throws PDOException lỗi cập nhật
  */
-function danhmuc_update($id, $ten_loai){
-    $sql = "UPDATE danhmuc SET LOAISP='".$ten_loai."' WHERE THUTU=".$id;
+function danhmuc_update($id, $madm, $ten_loai){
+    $sql = "UPDATE danhmuc SET IDDM='".$madm."', LOAISP='".$ten_loai."' WHERE THUTU=".$id;
     pdo_execute($sql);
 }
 /**

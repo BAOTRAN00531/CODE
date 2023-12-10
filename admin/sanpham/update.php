@@ -6,7 +6,7 @@
     }
     $imgPATH="../uploads/".$hinhanh;
     if(is_file($imgPATH)){
-        $hinh="<img src='".$imgPATH."' max-height='40%'";
+        $hinh="<img src='".$imgPATH."' height='100px',width='100px'";
     }else{
          $hinh="khum có ảnh";
     }
@@ -39,10 +39,10 @@
                                 <input type="text" name="soluong" id="rowlist" value="<?=$TONKHO?>"  > 
                         </div>
                         <div class="">Hình: <br>
-                                <input type="file" name="hinh" id="rowlist"  > 
+                                <input type="file" name="hinh" id="rowlist"  ><br><br>
                                 <?=$hinh?>
                         </div>
-                        <div class="">Mô Tả: <br>
+                        <div class="">Mô Tả:<br>
                                 <textarea name="mota" id="" cols="30" rows="10"><?=$MOTA?></textarea> 
                         </div>
                         <div>
