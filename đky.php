@@ -2,7 +2,6 @@
 <?php
    $hoten=null;
    $user=null;
-   $gt=null;
    $address=null;
    $phone=null;
    $mail = null;	
@@ -45,7 +44,6 @@
       else{
         $hoten=null;
         $user=null;
-        $sex=null;
         $address=null;
         $phone=null;
         $mail = null;	
@@ -70,45 +68,87 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Đăng nhập</title>
     <link rel="stylesheet" href="sign2.css">
-
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script>
+    var loader = function() {
+        setTimeout(function() {
+            $('#loader').css({
+                'opacity': 0,
+                'visibility': 'hidden'
+            });
+        }, 1000);
+    };
+    $(function() {
+        loader();
+    });
+    </script>
 </head>
 <style>
 .error {
-    color: #af4242;
-    background-color: #fdeBec;
+    color: red;
     padding: 10px;
     display: none;
-    transform: translateY(-12px);
+    transform: translateY(-14px);
     font-size: 14px;
     width: 150px;
-    margin-bottom: -25px;
+    margin-bottom: -35px;
     margin-left: 70px;
     align-items: center;
 }
 </style>
 <?php
     if($hoten_error != null){
-        ?> <style>.hoten-error{display:block}</style> <?php
+        ?> <style>
+.hoten-error {
+    display: block
+}
+</style> <?php
      }
      if($user_error != null){
-        ?> <style>.user-error{display:block}</style> <?php
+        ?> <style>
+.user-error {
+    display: block
+}
+</style> <?php
      }
      if($pass_error != null){
-        ?> <style>.pass-error{display:block}</style> <?php
+        ?> <style>
+.pass-error {
+    display: block
+}
+</style> <?php
      }
      if($mail_error != null){
-        ?> <style>.mail-error{display:block}</style> <?php
+        ?> <style>
+.mail-error {
+    display: block
+}
+</style> <?php
      }
      if($address_error != null){
-        ?> <style>.address-error{display:block}</style> <?php
+        ?> <style>
+.address-error {
+    display: block
+}
+</style> <?php
      }
      if($phone_error != null){
-        ?> <style>.phone-error{display:block}</style> <?php
+        ?> <style>
+.phone-error {
+    display: block
+}
+</style> <?php
      }
 ?>
 
 <body>
     <form action="" method="post" autocomplete="off">
+        <div id="loader">
+            <div class="circle">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+            </div>
+        </div>
         <h2>Đăng Ký</h2>
         <label>Họ Tên</label><br>
         <input type="text" name="hoten" value="<?php echo $hoten; ?>"><br>
@@ -127,21 +167,12 @@
         <p class="error pass-error">
             <?php echo $pass_error; ?>
         </p><br>
- 
+
         <label>Email</label><br>
         <input type="email" name="mail" value="<?php echo $mail; ?>"><br>
         <p class="error mail-error">
             <?php echo $mail_error; ?>
         </p><br>
-
-        <section name="gt">
-        <label>Giới tính</label><br>
-        <input type="radio" name="sex" value="Nam">
-        <label for="Nam">Nam</label>
-        <input type="radio" name="sex" value="Nữ">
-        <label for="Nữ">Nữ</label><br>
-        </section>
-
 
         <label>Địa chỉ</label><br>
         <input type="text" name="address" value="<?php echo $address; ?>"><br>
