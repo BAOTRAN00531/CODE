@@ -6,10 +6,11 @@ function lichsu_select($iduser)
     $list = pdo_query($sql);
     return $list;
 }
-function lichsu_commented( $iduser , $idsp )
+function lichsu_commented( $iduser )
 {
-    $sql = ("SELECT * FROM `donhang` WHERE iduser=$iduser AND ");
-    
+    $sql = ("SELECT  ");
+    $list_commented = pdo_query($sql);
+    return $list_commented; 
 }
 function lichsu_select_all()
 {
