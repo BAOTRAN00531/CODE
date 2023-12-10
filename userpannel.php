@@ -6,6 +6,7 @@
 
 <style>
 .dbtn {
+  height: 40px;
   background-color: rgb(127, 182, 255);
   color: white;
   padding: 16px;
@@ -13,8 +14,14 @@
   border: none;
   cursor: pointer;
 }
-
+.dbtn {
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .dpdown {
+  height: 40px;
   position: relative;
   display: inline-block;
   margin: 0px;

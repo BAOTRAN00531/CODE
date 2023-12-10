@@ -39,7 +39,8 @@
                 {
                     $ten=$_POST['ten'];
                     $thutu=$_POST['thutu'];
-                    danhmuc_update($thutu,$ten);
+                    $madm=$_POST['madm'];
+                    danhmuc_update($thutu,$madm,$ten);
                 }
                 $listdm=danhmuc_select_all();
                 include "danhmuc/list.php";
@@ -142,3 +143,4 @@
         } 
         
 ?>
+

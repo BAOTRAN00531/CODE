@@ -5,6 +5,7 @@
 </head>
 <body>
     <!-- Form thêm sản phẩm -->
+    <h1>THÊM LOẠI HÀNG</h1>
     <form action="index.php?action=adddm" id="product-form" method="post" >
         <div class="">
             Mã Loại Hàng: <br>

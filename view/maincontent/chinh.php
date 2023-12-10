@@ -35,7 +35,7 @@
                                                   >
                                                   </lord-icon>
                                               </p>
-                                              <p class="game-viewership" >'.$GIASP.'</p>
+                                              <p class="game-viewership" >'. $GIASP . " ₫ ".'</p>
                                           </div>
                                           </a>
                                           <!-- sale -->

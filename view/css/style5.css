@@ -5,7 +5,13 @@ img {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
-  
+  .col a{
+    color: #61b9e5;
+    ;
+  }
+  .col a:hover{
+    color: #a3bded;
+  }
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   }
@@ -132,6 +138,14 @@ img {
   .colors {
     text-transform: UPPERCASE;
     font-weight: bold;
+  }
+  .product-title{
+    font-size: 50px;
+  }
+
+  .price,
+  .sizes,
+  .colors {
     font-size: 30px;
   }
 
@@ -141,7 +155,6 @@ img {
     color: #ff9f1a;
   }
   
-  .product-title,
   .rating,
   .product-description,
   .price,

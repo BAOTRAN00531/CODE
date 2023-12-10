@@ -21,15 +21,16 @@
                                                 </div>
                                                 <div class="game-info">
                                                     <p class="game-title">'.$TENSP.'</p>
-                                                    <p class="game-viewership">'.$GIASP.'</p>
+                                                    <p class="game-viewership">'. $GIASP . " ₫ ".'</p>
                                                 </div>
                                             </a>
                                             <div class="game-categories">
-                                                <a href="index.php?action=addtocart&id='.$MASP.'&ten='.$TENSP.'&hinh='.$hinh.'&gia='.$GIASP.'">+</a>
+                                                <a href="index.php?action=addtocart&id='.$MASP.'&ten='.$TENSP.'&hinh='.$hinh.'&gia='. $GIASP . " ₫ ".'">+</a>
                                             </div>
                                         </div>';
                                 }
                                 ?>
-                            </div> </div>
+                            </div> 
+                        </div>
                   
 </section>

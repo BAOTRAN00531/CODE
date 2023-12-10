@@ -1,6 +1,9 @@
 <?php
     ob_start();
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,7 +173,7 @@
                                 break;
                         case 'removefromcart':
                                 if (isset($_POST['removefromcart'] )&&($_POST['removefromcart'])) {
-                                        $id=$_POST['id'];
+                                        $id=$_POST['idsp'];
                                         foreach ($_SESSION['mycart'] as $key => $item) {
                                             if ($item[0] == $id) {
                                                 unset($_SESSION['mycart'][$key]);
@@ -209,11 +212,19 @@
                                      $idsp=$_POST['idsp'];
                                      $ngaydathang=date('d-m-Y H:i:s');
                                      $tong=tongdon();
-                                     $iddh=insert_giohang($idsp,$iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang);
-                                     $_SESSION['cart']=[];
+                                        foreach ($_SESSION['mycart'] as &$cart) {
+                                            $tensp=$cart[1] ;
+                                            $image=$cart[2];
+                                            $gia=$cart[3];
+                                        $soluong = $cart[4] ; // Cập nhật số lượng
+                                            break;
+                                        }
                                     }
+                                     $iddh=insert_giohang($idsp,$iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang,$tensp,$image,$gia, $soluong);
+ 
                                     $donhang=loadone_donhang($iddh);
                                     $donhang=loadone_CART($iddh);
+                                    $_SESSION['mycart'] = array();
                                     include "view/other/dathangtc.php";
                                 break;
                        
@@ -230,13 +241,18 @@
 
     </div>
     <script src="/js(new)/button.js"></script>     
-        <script src="/js(new)/icon.js"></script>
-        <script src="/js(new)/soluong.js"></script>
+        <script src="/js(new)/icon.js"></script>   
         <script src="/js(new)/slideshow.js"></script>
         <script src="/js(new)/menu_pu.js"></script>
         <script src="/js(new)/fb.js"></script>
         <script src="/js(new)/chedosangtoi.js"></script>
-        
+        <script>
+        // Chuyển giá trị PHP sang JavaScript
+        let isDay = <?php echo json_encode($themeMode === 'day'); ?>;
+
+        // Gọi hàm toggle() từ theme.js
+        toggle();
+    </script>
 
 </body>
 
