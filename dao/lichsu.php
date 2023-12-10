@@ -8,7 +8,13 @@ function lichsu_select($iduser)
 }
 function lichsu_commented( $iduser )
 {
-    $sql = ("SELECT  ");
+    $sql = ("SELECT * FROM `donhang` where iduser=$iduser GROUP BY MASP HAVING COUNT(*) > 2  ");
+    $list_commented = pdo_query($sql);
+    return $list_commented; 
+}
+function lichsu_not_commented( $iduser )
+{
+    $sql = ("SELECT * FROM `donhang` where iduser=$iduser GROUP BY MASP HAVING COUNT(*) < 2  ");
     $list_commented = pdo_query($sql);
     return $list_commented; 
 }

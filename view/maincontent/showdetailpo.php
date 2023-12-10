@@ -255,7 +255,8 @@
                 <div class="boxcontent binhluan">
                     <ul>
                         <?php 
-                            $dsbl = binhluan_select_all();
+                        $mahh = $_GET['idsp'];
+                            $dsbl = binhluan_select($mahh);
                             foreach ( $dsbl as $bl )
                             {
                                 extract( $bl );
