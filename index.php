@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="/view/css/slideshow.css">
     <link rel="stylesheet" href="/view/css/trungbinhdanhgia.css">
     <link rel="stylesheet" href="/view/css/userpannel.css">
+    <link rel="stylesheet" href="/view/css/gio_hang.css">
     <!-- đầu trang-->
     <!--<link rel="stylesheet" href="/view/css/backtotop.css"> bị trùng css với nút xem thêm của trang chi tiết sản phẩm -->
     <style>
@@ -77,6 +78,7 @@
 
 <body>
     <div class="app-container">
+        
         <?php
             include "dao/pdo.php"; 
             include "dao/danhmuc.php";
@@ -92,7 +94,7 @@
             $dsdm=danhmuc_loadall();
             $ctsp=sanpham_chitiet_by_id();
             include "view/menu.php";
-            
+            include "view/main.php";
   
             if (isset($_GET['action'] )&&($_GET['action'])) {
                 $act = $_GET['action'];
@@ -226,19 +228,25 @@
                                     $donhang=loadone_CART($iddh);
                                     $_SESSION['mycart'] = array();
                                     include "view/other/dathangtc.php";
-                                break;
-                       
+                                    break;
+                            case 'sanphamct':
+                                    if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
+                                        $id=$_GET['idsp'];
+                                      $onesp=sanpham_select_by_id($id);}
+                                      include "view/maincontent/showdetailpo.php";
+                                    break;
+
                         default:
-                            include "view/main.php";    
+                            include "view/maincontent/chinh.php";    
                                     break;
                     }
             }
                 else
             {
-                include "view/main.php";
+                include "view/maincontent/chinh.php";    
             }
             ?>
-
+      </div>
     </div>
     <script src="/js(new)/button.js"></script>     
         <script src="/js(new)/icon.js"></script>   

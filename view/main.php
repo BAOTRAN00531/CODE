@@ -39,25 +39,8 @@
                          include 'userpannel.php';
                         ?></div>   
             </div>
-          
-            <?php
-                if (isset($_GET['action']))
-                 {
-                     $tam = $_GET['action'];
-                }else{$tam = '';}
-                if ($tam== 'chinh') {
-                    include("maincontent/chinh.php");
-                }elseif($tam== 'sanphamct') {
-                    if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
-                      $id=$_GET['idsp'];
-                    $onesp=sanpham_select_by_id($id);}
-                    include("maincontent/showdetailpo.php");
-                } else{
-                    include("maincontent/chinh.php");
-                }
-            ?>
-       
-  </div>
+      
+
           
        
 
