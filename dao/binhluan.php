@@ -8,7 +8,7 @@ function binhluan_insert($iduser, $idsp, $noidung, $ngay_bl){
 }
 
 function binhluan_update($noidung,$iduser ){
-    $sql = "UPDATE binhluan SET noidung='.$noidung.' WHERE iduser=$iduser";
+    $sql = "UPDATE binhluan SET noidung='$noidung' WHERE iduser=$iduser";
     pdo_execute($sql, $noidung,$iduser);
 }
 
@@ -28,7 +28,10 @@ function binhluan_select_all(){
     $sql = "SELECT * FROM binhluan ORDER BY iduser DESC";
     return pdo_query($sql);
 }
-
+function binhluan_select($idsp){
+    $sql = "SELECT * FROM binhluan where mahh=$idsp ORDER BY iduser DESC";
+    return pdo_query($sql);
+}
 // function binhluan_select_by_id($ma_bl){
 //     $sql = "SELECT * FROM binhluan WHERE ma_bl=?";
 //     return pdo_query_one($sql, $ma_bl);

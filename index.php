@@ -102,6 +102,8 @@
                         case 'history':
                             $iduser = $_SESSION['ROLE']['USERID'];
                             $list = lichsu_select($iduser);
+                            $list_commented = lichsu_commented($iduser);
+                            $list_not_commented = lichsu_not_commented($iduser);
                             include '../FutureBooks/test2.php';
                             break;
                         case 'sanpham':
