@@ -2,24 +2,23 @@
 <?php
    $hoten=null;
    $user=null;
-   $sex=null;
+   $gt=null;
    $address=null;
    $phone=null;
    $mail = null;	
    $pass = null; 
    $hoten_error=null;
    $user_error=null;
-   $sex_error=null;
    $address_error=null;
    $phone_error=null;	
    $mail_error = null;  
+   $gt_error=null;
    $pass_error = null; 
    $success = null;
  
    if(isset($_POST['sign-up'])){
     $hoten=$_POST['hoten'];
     $user=$_POST['user'];
-    $sex=$_POST['sex'];
     $address=$_POST['address'];
     $phone=$_POST['phone'];
     $mail = $_POST['mail'];
@@ -37,9 +36,6 @@
       elseif(empty(trim($mail))){
         $mail_error = "Vui lòng không để trống!";
       }
-      elseif(empty(trim($sex))){
-        $sex_error = "Vui lòng không để trống!";
-      }
       elseif(empty(trim($address))){
         $address_error = "Vui lòng không để trống!";
       }
@@ -56,7 +52,6 @@
         $pass = null; 
         $hoten_error=null;
         $user_error=null;
-        $sex_error=null;
         $address_error=null;
         $phone_error=null;	
         $mail_error = null;  
@@ -104,9 +99,6 @@
      if($mail_error != null){
         ?> <style>.mail-error{display:block}</style> <?php
      }
-     if($sex_error != null){
-        ?> <style>.sex-error{display:block}</style> <?php
-     }
      if($address_error != null){
         ?> <style>.address-error{display:block}</style> <?php
      }
@@ -142,11 +134,14 @@
             <?php echo $mail_error; ?>
         </p><br>
 
+        <section name="gt">
         <label>Giới tính</label><br>
-        <input type="text" name="sex" value="<?php echo $sex; ?>"><br>
-        <p class="error sex-error">
-            <?php echo $sex_error; ?>
-        </p><br>
+        <input type="radio" name="sex" value="Nam">
+        <label for="Nam">Nam</label>
+        <input type="radio" name="sex" value="Nữ">
+        <label for="Nữ">Nữ</label><br>
+        </section>
+
 
         <label>Địa chỉ</label><br>
         <input type="text" name="address" value="<?php echo $address; ?>"><br>
