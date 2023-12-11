@@ -33,7 +33,6 @@
     <link rel="stylesheet" href="/view/css/trungbinhdanhgia.css">
     <link rel="stylesheet" href="/view/css/userpannel.css">
     <link rel="stylesheet" href="/view/css/gio_hang.css">
-    <link rel="stylesheet" href="/view/css/admin.css">
     
     <!-- đầu trang-->
     <!--<link rel="stylesheet" href="/view/css/backtotop.css"> bị trùng css với nút xem thêm của trang chi tiết sản phẩm -->
@@ -41,7 +40,7 @@
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="/view/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap" rel="stylesheet">
     <!-- css pu đánh giá -->
@@ -83,14 +82,35 @@
   <!-- menu -->
   <div class="sidenav">
         <!-- Giao diện bên trái -->
-        <a href="index.php?action=adddm" >Quản lý danh mục sản phẩm</a>
-        <a href="index.php?action=addsp">Quản lý sản phẩm</a>
-        <a href="index.php?action=quanlybaiviet=them">Quản lý bài viết</a>
-        <a href="index.php?action=quanlydanhmucbaiviet=them">Quản lý mục bài viết </a>
-        <a href="index.php?action=binhluan&query=them">Quản lý bl</a> 
-        <a href="index.php?action=logout">Log out</a>
-        <a href="../index.php">FutureBooks User</a>
-        
+        <a href="../index.php"><i class="fa fa-home"></i> Trang chủ</a>
+        <a href="../index.php?action=dangki"><i class="fa fa-fire"></i> Sale sốc</a>
+        <a href="../index.php?action=dangnhap"><i class="fa fa-fire"></i> Hot</a>
+        <a href="../dtdautu.php"><i class="fa fa-phone"></i> Liên hệ</a>
+        <div class="dropdown-btn"><i class="fa fa-book"></i> Danh Mục  
+            <i class="fa fa-caret-down"></i>
+        </div>
+        <div class="dropdown-container">
+            <?php
+                foreach ($dsdm as $dm)
+                {
+                    $THUTU = $dm['THUTU']; // Trích xuất giá trị của $THUTU từ mỗi phần tử trong mảng
+                    $LOAISP = $dm['LOAISP'];
+                    $dm = "index.php?action=sanpham&thutu=".$THUTU;
+                    echo '<a href="'.$dm.'">'.$LOAISP.'</a>';
+                }
+            ?>
+            </div>
+            <?php 
+            if (isset($_SESSION['ROLE'])) {
+                extract($_SESSION['ROLE']);
+
+                echo '<a href="../index.php?action=history"><i class="fa fa-clock-o" > </i> Lịch sử </a>';
+            echo  '<a href="index.php?action=addtocart"><i class="fa fa-shopping-cart"></i> Giỏ hàng<span> (0)</span></a>';
+            }else {
+                        echo'';         
+            }
+        ?>
+       <br>
      
       
     
@@ -208,197 +228,29 @@
 
         
         <!-- Giao diện giữa -->
-            <!-- Giao diện giữa -->
- <div class="main-area">
-     <!-- hiện ra hai nút ẩn khi giao diện nhỏ (nút hiện giao diện bên trái và bên phải) -->
-     <button class="btn-show-right-area">
-         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-             class="feather feather-chevron-left">
-             <polyline points="15 18 9 12 15 6" />
-         </svg>
-     </button>
-     <button class="btn-show-left-area">
-         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-             <line x1="3" y1="12" x2="21" y2="12" />
-             <line x1="3" y1="6" x2="21" y2="6" />
-             <line x1="3" y1="18" x2="21" y2="18" />
-         </svg>
-     </button>
-     <!-- Tiêu đề chính, chứa nút tìm kiếm -->
+            <div class="main-area">
+            <!-- hiện ra hai nút ẩn khi giao diện nhỏ (nút hiện giao diện bên trái và bên phải) -->
+            <button class="btn-show-right-area">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="btn-show-left-area"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <!-- Tiêu đề chính, chứa nút tìm kiếm -->
             <div class="main-area-header">
-                <div class="first-child">
                 <!-- nút tìm kiếm -->
-                <form action="../../index.php?action=sanpham" method="post">
-                    <div class="search-wrapper" id="searchLine">
-                        <input class="search-input" type="text" placeholder="Tìm kiếm" name="keyw">
-                        <button type="submit" style="border: none;background: none" >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search"
-                                viewBox="0 0 24 24">
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="M21 21l-4.35-4.35" />
-                            </svg>
-                        </button>
-                        
-                    </div>
-                </form>
-                </div>
-                <!-- <div class="second-child"><?php
-                         //include 'userpannel.php';
-                        ?></div>    -->
+                <div class="container">
+                  <div class="search-wrapper" id="searchLine">
+                      <input class="search-input" type="text" placeholder="tìm kiếm">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+                          <defs/>
+                          <circle cx="11" cy="11" r="8"/>
+                          <path d="M21 21l-4.35-4.35"/>
+                      </svg>
+                  </div>
+                  <!-- <i class="fa fa-shopping-cart" style="font-size:24px"></i> -->
+              </div>
             </div>
-            <section class="content-section">
-            
-<?php
-    include "../dao/pdo.php";
-    include "../dao/danhmuc.php";
-    include "../dao/sanpham.php";
-
-    if (isset($_GET['action'] )) {
-        $act = $_GET['action'];
-        switch ($act) {
-            case 'adddm':
-                if(isset($_POST['addlist'])&&($_POST['addlist'])){
-                     $ten=$_POST['ten'];
-                     $madm=$_POST['madm'];
-                     danhmuc_insert($madm, $ten);
-                    }
-                $listdm=danhmuc_select_all();
-                include "danhmuc/add.php";
-                break;
-            case 'listdm':
-                $listdm=danhmuc_select_all();
-                include "danhmuc/list.php";
-                break;
-            case 'xoadm':
-                if (isset($_GET['id'])&&($_GET['id']>0)) {
-                   danhmuc_delete($_GET['id']);
-                 }
-                 $listdm=danhmuc_select_all();
-                $sql="select * from danhmuc order by LOAISP desc";
-                $listdm=pdo_query($sql);
-                include "danhmuc/list.php";
-                break;
-            case 'suadm':
-                if (isset($_GET['id'])&&($_GET['id']>0)) {
-                   $dm=danhmuc_select_by_id($_GET['id']);
-                  }
-                include "danhmuc/update.php";
-                break;
-            case 'updatedm':
-                if(isset($_POST['capnhat'])&&($_POST['capnhat']))
-                {
-                    $ten=$_POST['ten'];
-                    $thutu=$_POST['thutu'];
-                    $madm=$_POST['madm'];
-                    danhmuc_update($thutu,$madm,$ten);
-                }
-                $listdm=danhmuc_select_all();
-                include "danhmuc/list.php";
-                break; 
-            case 'addsp':
-                if(isset($_POST['addsp'])&&($_POST['addsp'])){
-                    $iddm=$_POST['iddm'];
-                    $ten=$_POST['tensp'];
-                    $gia=$_POST['giasp'];
-                    $soluong=$_POST['soluongsp'];
-                    $mota=$_POST['mota'];
-                    $filename=$_FILES['hinh']['name'];
-                    $target_dir = "../uploads/";
-                    $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
-                    if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)){
-
-                    }else{
-
-                    }
-                    sanpham_insert($iddm,$ten,$gia,$soluong,$filename,$mota);
-                   }
-                $listdm=danhmuc_select_all();              
-                include "sanpham/add.php";
-                break;
-            case 'listsp':
-                if(isset($_POST['listOK'])&&($_POST['listOK'])){
-                    $keyw=$_POST['keyw'];
-                    $iddm=$_POST['iddm'];
-                }else{
-                    $keyw='';
-                    $iddm=0;
-                }
-                $listdm=danhmuc_select_all();
-                $listsp=sanpham_select_all($keyw,$iddm);
-                include "sanpham/list.php";
-                break;
-            case 'xoasp':
-                if (isset($_GET['id'])&&($_GET['id']>0)) {
-                    sanpham_delete($_GET['id']);
-                  }
-                 
-                  $listsp=sanpham_select_all("",0);
-                  include "sanpham/list.php";
-                break;
-            case 'suasp':
-                if (isset($_GET['id'])&&($_GET['id']>0)) {
-                    $sanpham=sanpham_select_by_id($_GET['id']);
-                    $listdm = danhmuc_select_all(); // Khởi tạo $listdm
-                    if ($sanpham) {
-                        extract($sanpham);
-                    } else {
-                        echo "Không tìm thấy sản phẩm";
-                    }
-                }
-                include "sanpham/update.php";
-                break;
-            
-            case 'updatesp':
-                if(isset($_POST['capnhatsp'])&&($_POST['capnhatsp']))
-                {
-                    $ten=$_POST['tensp'];
-                    $gia=$_POST['giasp'];
-                    $mota=$_POST['mota'];
-                    $soluong=$_POST['soluong'];
-                    $id=$_POST['id'];
-                    $filename=$_FILES['hinh']['name'];
-                    $target_dir = "../uploads/";
-                    $target_file = $target_dir . basename($_FILES["hinh"]["name"]);
-                    if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)){
-                    }else{
-                    }
-                }
-                sanpham_update($id,$ten,$gia,$soluong,$filename,$mota);
-                $sanpham=sanpham_select_by_id($id);
-                include "sanpham/list.php";
-                break;
-            case 'logout':
-                    unset( $_SESSION['ROLE'] );
-                    header("Location: ../login.php");
-                    break; 
-            case 'suabl':
-                     if ( isset( $_POST['suabl'] ) )
-                    {
-
-                        $sql_edit = "UPDATE `binhluan` set `noidung` = '$noidungsua' WHERE `id` = $_GET[id] ";
-                        mysqli_query($conn,$sql_edit); 
-                        header('Location:../../index.php?action=binhluan');
-                    }
-                    else
-                    {
-                        $id=$_GET['id'];
-                        $sql_xoa= "DELETE FROM binhluan where id='".$id."' ";
-                        mysqli_query($conn,$sql_xoa);  
-                        header('Location:../../index.php?action=binhluan');  
-                    }          
-                  
-            default:
-                    # code...
-                    break;
-            }
-        } 
-        
-?>
-
-</section>
            
         <!-- Giao diện bên phải -->
             
@@ -421,5 +273,3 @@
         </div>
     </body> 
 </html>
-
-

@@ -30,7 +30,7 @@
             <input type="text" name="soluongsp" id="rowlist" > 
        </div>
        <div class="">Hình: <br>
-            <input type="file" name="hinh" id="rowlist" > 
+            <input class="input-hinh" type="file" name="hinh" id="rowlist" >
        </div>
        <div class="">Mô Tả: <br>
             <textarea name="mota" id="" cols="30" rows="10"></textarea> 

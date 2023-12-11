@@ -189,7 +189,7 @@
                                 $iduser = $_POST['iduser'];
                                 $ngay_bl = date('d-m-Y H:i:s');
                                 binhluan_insert( $iduser, $idsp, $noidung , $ngay_bl );
-                            // header ('Location: index.php?action=sanphamct&idsp='.$idsp.'');   
+                            header ('Location: index.php?action=history');   
                             } 
                             
                             // include 'view/maincontent/showdetailpo.php';

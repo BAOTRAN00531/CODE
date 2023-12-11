@@ -1,3 +1,32 @@
+<table style="border:1px solid white;">
+<tr>
+<th>
+Ma nguoi dung
+</th>
+<th>
+Ma don hang
+</th>
+<th>
+Ten nguoi dat
+</th>
+<th>
+Ma don hang
+</th>
+<th>
+Dia chi nhan hang
+</th>
+<th>
+So dien thoai nguoi nhan
+</th>
+<th>
+Tong don hang
+</th>
+<th>
+ngay dat hang
+</th>
+<th>
+</th>
+</tr>
 <?php 
 
 foreach ($list as $k => $v)
@@ -6,24 +35,60 @@ foreach ($list as $k => $v)
 
     $iduser = $v['iduser'];
     $idsp = $v['MASP'];
+?>
 
+<?php 
 echo '
-<br>
-<div>
-<div class="lmao">
+
+
+
+<tr>
+<td>
+'.$v['iduser'].'
+</td>
+<td>
+'.$v['IDDH'].'
+</td>
+<td>
+'.$v['HOTEN'].'
+</td>
+<td>
+'.$v['DIACHI'].'
+</td>
+<td>
+'.$v['PHONE'].'
+</td>
+<td>
+'.$v['EMAIL'].'
+</td>
+<td>
+'.$v['TONG'].'
+</td>
+<td>
+'.$v['NGAYDATHANG'].'
+</td>
+<td>
+<div class="dropdown-btn">
+lmao
+</div>
+<div class="dropdown-container">
 <form action="../index.php?action=binhluan" method="post">
-    '.$v['iduser'].' '.$v['MASP'].' '.$v['IDDH'].' '.$v['HOTEN'].' '.$v['DIACHI'].' '.$v['PHONE'].' '.$v['EMAIL'].' '.$v['TONG'].' '.$v['PTTT'].' '.$v['NGAYDATHANG'].' <br>
     <textarea name="noidung" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
     <input type="hidden" name="idsp" id="idsp" value="'.$idsp.'">
     <input type="hidden" name="iduser" id="iduser" value="'.$iduser.'">
         <input type="submit" name="guibinhluan" class="btn submit">
 </form>
 </div>
-</div>
-<br>
-    ';
-}
+</td>
 
+    ';
+    ?>
+
+<?php 
+}
+?>
+</table>
+<?php 
 // foreach ( $list_commented as $commented => $values )
 // {
 //     extract( $values );
