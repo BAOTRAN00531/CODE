@@ -6,7 +6,7 @@
             </div>
             <div class="row frmcontent">
                 <div class="row mb10 frmloai">
-                    <table style="color: violet;text-align: center">
+                    <table style="text-align: center">
                         <tr>
                             <th></th>
                             <th>THỨ TỰ</th>

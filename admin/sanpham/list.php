@@ -19,7 +19,7 @@
                     <input type="Submit" name="listOK" value="Search"> 
                 </form>
                 <div class="row mb10 frmloai">
-                    <table style="color: violet; text-align:center;">
+                    <table style=" text-align:center;">
                         <tr>
                             <th></th>
                             <th>MÃ SẢN PHẨM </th>

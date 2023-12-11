@@ -14,6 +14,7 @@
        <div class="">Tên: <br>
             <input type="text" name="ten" id="rowlist" > 
        </div>
+       <br>
         <div>
             <input type="submit" id="add" name="addlist" value="Thêm">
             <input type="reset" value="Nhập lại">
