@@ -1,9 +1,6 @@
 <?php
     ob_start();
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,13 +33,12 @@
     <link rel="stylesheet" href="/view/css/menu_pu.css">
     <!-- danhgia -->
     <link rel="stylesheet" href="/view/css/danhgia.css">
+    <link rel="stylesheet" href="/view/css/dkdautu.css">
     <link rel="stylesheet" href="/view/css/slideshow.css">
     <link rel="stylesheet" href="/view/css/trungbinhdanhgia.css">
     <link rel="stylesheet" href="/view/css/userpannel.css">
     <link rel="stylesheet" href="/view/css/gio_hang.css">
     
-    <!-- đầu trang-->
-    <!--<link rel="stylesheet" href="/view/css/backtotop.css"> bị trùng css với nút xem thêm của trang chi tiết sản phẩm -->
     <style>
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -60,9 +56,6 @@
     <link rel="stylesheet" href="view/css/cd.css">
     <link rel="stylesheet" href="../css/dathangtc.css">
     <!-- đánh giá 5 sao -->
-
-
-
     <!-- js animation icon -->
     <script src="https://cdn.lordicon.com/lordicon-1.2.0.js"></script>
     <!-- js nguyên -->
@@ -70,11 +63,7 @@
     <!-- nút với số lượng -->
     <script src="nguyen.js"></script>
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
-    
-
 </head>
 
 <body>
