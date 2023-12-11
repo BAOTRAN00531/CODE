@@ -11,13 +11,13 @@
     <h1>Đăng kí đầu tư</h1>
     <br>
   <form class="form-quynh" action="index.php?action=dkdautu" method="post" enctype="multipart/form-data">
-    <label for="hoten">Họ tên:</label>
-    <input type="text" id="hoten" name="hoten" required><br><br>
-    <label for="congty">Công ty:</label>
-    <input type="text" id="congty" name="congty" required><br><br>
-    <label for="hopdong">Hợp đồng:</label>
-    <input type="file" id="hopdong" name="hopdong" required><br><br>
-    <input type="submit" value="Đăng kí">
+    <label class="label-quynh" for="hoten">Họ tên:</label>
+    <input class="input-quynh" type="text" id="hoten" name="hoten" required><br><br>
+    <label class="label-quynh" for="congty">Công ty:</label>
+    <input class="input-quynh" type="text" id="congty" name="congty" required><br><br>
+    <label class="label-quynh" for="hopdong">Hợp đồng:</label>
+    <input class="input-quynh" type="file" id="hopdong" name="hopdong" required><br><br>
+    <input class="input-quynh" type="submit" value="Đăng kí">
   </form>
 </body>
 </html>
