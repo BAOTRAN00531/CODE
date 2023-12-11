@@ -69,7 +69,7 @@ echo '
 </td>
 <td>
 <div class="dropdown-btn">
-lmao
+feedback
 </div>
 <div class="dropdown-container">
 <form action="../index.php?action=binhluan" method="post">

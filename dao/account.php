@@ -6,7 +6,17 @@
         $sql = "INSERT INTO tk(username,password,HOTEN,EMAIL,GIOITINH,DIACHI,SDT) VALUES(?,?,?,?,?,?,?)";
         pdo_execute($sql, $username, $password, $fullname, $email, $gender, $address, $phone);
     }
-
+    function account_select( $iduser )
+    {
+        $sql = "SELECT * FROM `tk` WHERE USERID=$iduser";
+        $list = pdo_query($sql);
+        return $list;
+    }
+    function account_update( $name , $age , $gender , $phone , $userid )
+    {
+        $sql = "UPDATE tk SET HOTEN='$name' , TUOI='$age' , GIOITINH='$gender' , SDT='$phone' WHERE USERID =$userid";
+        pdo_execute( $sql );
+    }
     function checkuser($email, $password) {
         $password = md5($password); // Mã hóa mật khẩu
         $sql = "SELECT * from tk where EMAIL= :email AND password= :password";

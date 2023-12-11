@@ -81,6 +81,7 @@
         <span>chào ! '.$_SESSION['ROLE']['HOTEN'].'</span><br>
         <div class="google_account">
         </div><br>
+        <a href="index.php?action=user">info</a>
         <button class="logout">Đăng xuất</button>';
   ?> 
   <?php

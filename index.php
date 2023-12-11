@@ -89,6 +89,20 @@
             if (isset($_GET['action'] )&&($_GET['action'])) {
                 $act = $_GET['action'];
                     switch ($act) {
+                        case 'user':
+
+                            include "user.php";
+                            break;
+                        case 'edituser':
+
+                            $userid = $_POST['iduser'];
+                            $name = $_POST['name'];
+                            $age = $_POST['age'];
+                            $gender = $_POST['gender'];
+                            $phone = $_POST['phone'];
+                            account_update( $name , $age , $gender , $phone , $userid );                         
+                        include "user.php";
+                            break;
                         case 'history':
                             $iduser = $_SESSION['ROLE']['USERID'];
                             $list = lichsu_select($iduser);

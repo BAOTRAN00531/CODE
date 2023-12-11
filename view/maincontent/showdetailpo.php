@@ -239,18 +239,6 @@
     <div class="card">
         <!-- pu -->
 
-        <div class="wrapper">
-            <form>
-                <div class="rating">
-                    <input type="number" name="rating" hidden>
-                    <i class='bx bx-star star'></i>
-                    <i class='bx bx-star star'></i>
-                    <i class='bx bx-star star'></i>
-                    <i class='bx bx-star star'></i>
-                    <i class='bx bx-star star'></i>
-                </div>
-            </form>
-        </div>
                 <div class="boxtitle">binh luan</div>
                 <div class="boxcontent binhluan">
                     <ul>
@@ -261,22 +249,16 @@
                             {
                                 extract( $bl );
 
-                                echo "$noidung <br>";
+                                echo '
+                                '.$bl['iduser'].'
+                                '.$noidung.' <br>
+                                ';
                                 
                             }
 
                         ?>
                     </ul>
-                </div>
-                <form action="../index.php?action=binhluan" method="post">
-                    <textarea name="noidung" cols="70" row="9" placeholder="FutureBooks xin đánh giá của quý khách..."></textarea>
-                    <input type="hidden" name="idsp" id="idsp" value="<?=$mahh?>">
-                    <input type="hidden" name="iduser" id="iduser" value="<?=$iduser?>">
-                    <div class="btn-group">
-                        <input type="submit" name="guibinhluan" class="btn submit">
-                        <button onclick="cancel" class="btn cancel">Cancel</button>
-                    </div>
-                </form>
+
     </div>
     <script src="/js(new)/danhgia.js"></script>
     <script src="/js(new)/soluong.js"></script>
