@@ -285,8 +285,8 @@
                                 <div id="eWalletDropdown" class="payment-dropdown" style="display: none;">
                                     <label for="e-wallet-option">Lựa chọn phương thức:</label>
                                     <select id="e-wallet-option" name="e-wallet-option">
-                                        <option name="pttt" value="<?=2?>">Ví MoMo</option>
-                                        <option  name="pttt"value="<?=3?>">VNPay</option>
+                                        <option name="momo" value="<?=2?>">Ví MoMo</option>
+                                        <option  name="vnpay"value="<?=3?>">VNPay</option>
                                     </select>
                                 </div>
                                 <!-- Credit Card Dropdown -->

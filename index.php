@@ -183,6 +183,46 @@
                                 $donhang=loadone_CART($iddh);
                                 include "view/other/dathangtc.php";
                             break;
+                            case 'donhangtt':
+                                if (isset($_POST['dathang'] )&&($_POST['dathang'])) {
+                                     $name=$_POST['name'];
+                                     $email=$_POST['email'];
+                                     $phone=$_POST['tel'];
+                                     $pttt=1;
+                                     $tinhtrang=1;
+                                     $address=$_POST['address'];
+                                     $iduser=$_POST['iduser'];
+                                     $idsp=$_POST['idsp'];
+                                     $ngaydathang=date('d-m-Y H:i:s');
+                                     $tong=tongdon();
+                                        foreach ($_SESSION['mycart'] as &$cart) {
+                                            $tensp=$cart[1] ;
+                                            $image=$cart[2];
+                                            $gia=$cart[3];
+                                        $soluong = $cart[4] ; // Cập nhật số lượng
+                                            break;
+                                        }
+                                    } $_SESSION['mycart'] = [];
+                                     $iddh=insert_giohang($idsp,$iduser,$name, $address, $phone,$email, $tong, $pttt, $ngaydathang,$tensp,$image,$gia, $soluong);
+                                    
+                                    $donhang=loadone_donhang($iddh);
+                                    $donhang=loadone_CART($iddh);
+                                    
+                                    include "view/other/dathangtc.php";
+                                    break;
+                            case 'sanphamct':
+                                    if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
+                                        $id=$_GET['idsp'];
+                                      $onesp=sanpham_select_by_id($id);}
+                                      include "view/maincontent/showdetailpo.php";
+                                    break;
+                            case "thanhtoan":
+                              include "view/other/hoadon.php";
+                              break;
+                            case "dautu":
+                                include "dtdautu.php";
+                                break;
+
                         default:
                             include "view/main.php";    
                                     break;
