@@ -1,0 +1,38 @@
+form{
+    border: 2px solid #ffadc9;
+    padding: 20px;
+    width: 300px;
+    height: 700px;
+    font-size: 20px;
+    margin: 20px;
+    background-color: #ffadc9;
+    border-radius: 5px;
+    
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2{
+    text-align: center;
+}
+
+input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
+    width: 300px;
+    border: 1px solid;
+    height: 25px;
+}
+
+input[type="submit"]
+{
+    border: none;
+    width: 301px;
+    height: 30px;
+    background-color: #ffdbe7;
+}
+
+
+
