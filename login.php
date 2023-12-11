@@ -68,7 +68,7 @@ if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
         </div>
       </div>
       <div class="form__submit">
-        <input type="submit" name="dangnhap" value="Đăng nhập">
+        <input type="submit" name="sign-in" value="Đăng nhập">
       </div>
     </form>
   </div>

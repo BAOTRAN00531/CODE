@@ -22,7 +22,7 @@
 }
 .dpdown {
   height: 40px;
-  position: relative;
+  position: absolute;
   display: inline-block;
   margin: 0px;
   text-align: center;
@@ -98,7 +98,7 @@
       <span>Hi ! User</span><br>
       <div class="google_account">
       </div><br>
-      <button class="logout">Đăng xuất</button>';}
+      <a href="../index.php?action=login"><button class="logout">Đăng nhập</button></a>';}
    ?>
 
   

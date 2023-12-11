@@ -247,6 +247,53 @@
                             case "dautu":
                                 include "dtdautu.php";
                                 break;
+                            case "login":
+                                include "dnhap.php";
+                                    break;
+                            case "dangnhap":
+                                if (isset($_POST['dangnhap']) && ($_POST['dangnhap'])) {
+                                    $email = $_POST['email'];
+                                    $password = $_POST['pass'];
+                                  
+                                    // Use the function check_user instead of checkuser
+                                    $user = check_user($email, $password);
+                                  
+                                    if ($user) {
+                                        // Set user information in session
+                                        $_SESSION['ROLE'] = $user;
+                                  
+                                        if ($user['ROLE'] == 0) {
+                                            echo "vo trang client";
+                                            header('location: index.php');
+                                            exit(); // Add exit() to stop further execution
+                                        } else {
+                                            echo "vo trang admin";
+                                            header('location: /admin/index.php');
+                                            exit(); // Add exit() to stop further execution
+                                        }
+                                    } else {
+                                        echo "Invalid username or password"; // Add appropriate error handling
+                                        // file deepcode ignore XSS: <please specify a reason of ignoring this>
+                                        echo "<br>Email: $email<br>Password: " .$password;
+                                        exit(); // Add exit() to stop further execution
+                                    }
+                                  }
+                                    break;
+                                case "dangki":
+                                        include "dky.php";
+                                    break;
+                                case "signup":
+                                    if(isset($_POST['sign-up'])&&($_POST['sign-up'])){
+                                        $username = $_POST['user'];
+                                        $password = $_POST['pass'];
+                                        $fullname = $_POST['hoten'];
+                                        $email= $_POST['mail'];
+                                        $address= $_POST['address'];
+                                        $phone=$_POST['phone'];
+                                        account_insert($username, $password,$fullname,$email,$address,$address,$phone);
+                                    }
+                                    include 'dnhap.php';
+                                    break;
                         default:
                             include "view/maincontent/chinh.php";    
                                     break;

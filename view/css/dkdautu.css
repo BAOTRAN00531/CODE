@@ -7,26 +7,26 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-label {
+.label-quynh {
   display: block;
   margin-bottom: 8px;
   font-size: 16px;
   color: #333;
 }
 
-input {
+.input-quynh{
   width: 100%;
   padding: 8px;
   margin-bottom: 16px;
   box-sizing: border-box;
 }
 
-input[type="submit"] {
+.input-quynh[type="submit"] {
   background-color: #5b7ead;
   color: #fff;
   cursor: pointer;
 }
 
-input[type="submit"]:hover {
+.input-quynh[type="submit"]:hover {
   background-color: #a3bded;
 }
