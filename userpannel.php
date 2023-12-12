@@ -74,15 +74,19 @@
           </button>
         <div class="content">
           <div class="open-tittle">
-        <span></span><br>
-        <span>Managed by Futurebook</span><br>
+          <span></span>
+          <img src="uploads/055d9a31e0b31a20e426fb7bf1031ce5.jpg" style="width: 150px; height: 150px; border-radius: 50%;"><br>
+          <span>Hi! '.$_SESSION['ROLE']['HOTEN'].'</span><br>
+        <a href="index.php?action=user"><button  style="width:250px;class="add-to-cart btn btn-default" >INFO</button></a>
+
           </div>
-        <img src="../IMG/7.png" width="100px"><br>
-        <span>chào ! '.$_SESSION['ROLE']['HOTEN'].'</span><br>
+        
+       
         <div class="google_account">
+
+        
         </div><br>
-        <a href="index.php?action=user">info</a>
-        <button class="logout">Đăng xuất</button>';
+        ';
   ?> 
   <?php
     }else{
@@ -91,14 +95,14 @@
         </button>
       <div class="content">
         <div class="open-tittle">
-      <span>Futurebook@fpt.edu.vn</span><br>
-      <span>Managed by Futurebook</span><br>
+        <img style="padding-top:25px" src="/view/images/7.png" width="100px"><br>
+        <a href="../index.php?action=login"><button style="width:250px;class="add-to-cart btn btn-default">Đăng nhập</button></a>
+        <a href="../index.php?action=signup"><button style="width:250px;class="add-to-cart btn btn-default">Đăng kí</button></a>
         </div>
-      <img src="../IMG/7.png" width="100px"><br>
-      <span>Hi ! User</span><br>
       <div class="google_account">
+      
       </div><br>
-      <a href="../index.php?action=login"><button class="logout">Đăng nhập</button></a>';}
+      ';}
    ?>
 
   

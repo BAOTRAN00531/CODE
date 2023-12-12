@@ -32,7 +32,7 @@ ob_start();
 </style>
 
 
-<body>
+<body><div class="mau">
     <form action="../index.php?action=dangnhap" method="post" autocomplete="off">
         <div id="loader">
             <div class="circle">
@@ -51,11 +51,11 @@ ob_start();
         <input type="password" name="pass" ><br>
         <br>
 
-        <input type="submit" name="dangnhap" value="Đăng Nhập">
+         <input  type="submit" name="dangnhap" value="Đăng Nhập">
         
-        <a href="../index.php?action=dangki">Dangki</a>
+        <a  href="../index.php?action=dangki">Dangki</a>
     </form>
-   
+    </div>
 </body>
 
 </html>

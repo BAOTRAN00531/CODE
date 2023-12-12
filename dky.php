@@ -26,7 +26,8 @@
 
 </style>
 <body>
-    <form action="../index.php?action=signup" method="post" autocomplete="off">
+    <div class="mau">
+    <form action="../index.php?action=signup"  method="post" autocomplete="off">
         <div id="loader">
             <div class="circle">
                 <div class="circle1"></div>
@@ -61,6 +62,7 @@
         <input type="submit" name="sign-up" value="Đăng Ký">
       
     </form>
+    </div>
 </body>
 
 </html>

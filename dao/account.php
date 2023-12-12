@@ -12,9 +12,9 @@
         $list = pdo_query($sql);
         return $list;
     }
-    function account_update( $name , $age , $gender , $phone , $userid )
+    function account_update( $name , $age , $gender , $phone , $userid ,$img)
     {
-        $sql = "UPDATE tk SET HOTEN='$name' , TUOI='$age' , GIOITINH='$gender' , SDT='$phone' WHERE USERID =$userid";
+        $sql = "UPDATE tk SET HOTEN='$name' , TUOI='$age' , GIOITINH='$gender' , SDT='$phone',hinhanh='$img' WHERE USERID =$userid";
         pdo_execute( $sql );
     }
     function checkuser($email, $password) {

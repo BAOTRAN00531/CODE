@@ -4,11 +4,6 @@
     box-sizing: border-box;
 }
 
-html{
-    background:url(../IMG/sea.jpg) no-repeat center center fixed;
-    background-size: cover;
-    font-size: 70%;
-}
 
 body{
     display: flex;

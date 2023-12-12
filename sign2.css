@@ -1,8 +1,8 @@
-form{
+.mau{
     border: 2px solid #a3bded44;
     padding: 20px;
-    width: 300px;
-    height: 480px;
+    width: 400px;
+    height: 700px;
     font-size: 15px;
     margin: 20px;
     background-color: #a3bded94;
@@ -14,14 +14,14 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../uploads/bacckground.jpg);
+
 }
 
 h2{
     text-align: center;
 }
 
-input[type="email"],input[type="password"],input[type="text"],input[type="tel"]{
+input[type="email"],input[type="password"],.hoten,input[type="tel"]{
     width: 300px;
     border: 1px solid;
     height: 25px;

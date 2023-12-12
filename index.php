@@ -94,13 +94,13 @@
                             include "user.php";
                             break;
                         case 'edituser':
-
                             $userid = $_POST['iduser'];
                             $name = $_POST['name'];
                             $age = $_POST['age'];
                             $gender = $_POST['gender'];
                             $phone = $_POST['phone'];
-                            account_update( $name , $age , $gender , $phone , $userid );                         
+                            $img = $_POST['img'];
+                            account_update( $name , $age , $gender , $phone , $userid,$img );                         
                         include "user.php";
                             break;
                         case 'history':
@@ -153,7 +153,7 @@
                                 unset( $_SESSION['ROLE'] );
                                 $_SESSION['mycart']=[];
                                 unset($_SESSION['mycart']);
-                                header("Location: ../login.php");
+                                header("Location: index.php");
                                 break;
                         case 'addtocart':
                             if (isset($_POST['addtocart'] )&&($_POST['addtocart'])) {
